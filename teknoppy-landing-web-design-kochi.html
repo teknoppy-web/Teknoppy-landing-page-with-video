@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Design Company in Kochi | Teknoppy</title>
+<meta name="description" content="Kochi's web design company building fast, mobile-friendly, SEO-ready websites. Websites from ₹25,000, live in 3–5 weeks. Free plan and fixed quote in 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Ads / GA4: paste your gtag snippet here -->
+<style>
+/* =========================================================
+   TEKNOPPY BRAND COLOURS: edit these to match the logo exactly
+   ========================================================= */
+:root{
+  --orange:#FF6B00;
+  --orange-dark:#E85D00;
+  --yellow:#FFC400;
+  --yellow-soft:#FFF8E1;
+  --orange-soft:#FFF2E8;
+  --cream:#FAFAFA;
+  --white:#FFFFFF;
+  --black:#111111;
+  --ink:#1A1A1A;
+  --muted:#5F5F5F;
+  --line:#EDEDED;
+  --ok:#16A34A;
+  --grad:linear-gradient(135deg,#FF6B00 0%,#FF8A1F 100%);
+  --radius:20px;
+  --shadow:0 24px 50px -28px rgba(0,0,0,.22);
+  --shadow-soft:0 14px 40px -18px rgba(0,0,0,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.12;letter-spacing:-.03em;color:var(--black)}
+h2{font-size:clamp(1.75rem,3.4vw,2.7rem);font-weight:800}
+section{padding:110px 0}
+.cream{background:var(--cream)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+.eyebrow::before{content:"";width:24px;height:3px;border-radius:3px;background:var(--yellow)}
+.lead{color:var(--muted);font-size:1.06rem;max-width:640px;margin-top:12px}
+.center{text-align:center}.center .lead{margin-inline:auto}
+.mark{background:linear-gradient(transparent 62%,var(--yellow) 62%);padding:0 4px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:1rem;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-orange{background:var(--orange);color:#fff;box-shadow:0 12px 26px -12px rgba(255,107,0,.75)}
+.btn-orange:hover{background:var(--orange-dark);transform:translateY(-2px)}
+.btn-line{background:#fff;color:var(--black);border:1.5px solid #D9D9D9}
+.btn-line:hover{border-color:var(--black)}
+.btn-black{background:var(--black);color:#fff}
+.btn-black:hover{background:#000;transform:translateY(-2px)}
+.pulse{animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,107,0,.55)}70%{box-shadow:0 0 0 16px rgba(255,107,0,0)}100%{box-shadow:0 0 0 0 rgba(255,107,0,0)}}
+.cta-row{margin-top:40px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+/* top strip */
+.topbar{background:var(--black);color:#fff;font-size:.86rem;font-weight:600;text-align:center;padding:9px 16px}
+.topbar b{color:var(--yellow)}
+.topbar a{color:var(--yellow);text-decoration:underline;text-underline-offset:3px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;font-weight:800;font-size:1.35rem;color:var(--black)}
+.logo img{height:38px;width:auto}
+.nav-cta{display:flex;gap:14px;align-items:center}
+.nav-phone{font-weight:700;display:flex;gap:8px;align-items:center}
+.nav-phone .ic{width:38px;height:38px;border-radius:50%;background:var(--yellow-soft);display:grid;place-items:center}
+.nav .btn{padding:11px 22px;font-size:.92rem}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:80px 0 130px;background:
+  radial-gradient(520px 360px at 88% 30%,rgba(255,196,0,.16),transparent 70%),
+  var(--white)}
+.hero::before{content:"";position:absolute;right:6%;top:60px;width:340px;height:340px;border-radius:40px;background:var(--yellow);opacity:.9;transform:rotate(12deg);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:.88rem;font-weight:600;margin-bottom:22px}
+.stars{color:var(--yellow);letter-spacing:2px;text-shadow:0 0 1px rgba(0,0,0,.15)}
+.hero h1{font-size:clamp(2.2rem,4.8vw,3.6rem);font-weight:800;margin-bottom:20px}
+.hero p.sub{font-size:1.12rem;color:var(--muted);max-width:570px;margin-bottom:26px}
+.ticks{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin-bottom:32px;max-width:540px}
+.ticks li{list-style:none;display:flex;gap:10px;align-items:center;font-weight:600}
+.ticks li::before{content:"✓";display:grid;place-items:center;flex:0 0 24px;height:24px;border-radius:50%;background:var(--orange-soft);color:var(--orange);font-size:.8rem;font-weight:800}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* form card */
+.form-card{background:#fff;border-radius:24px;padding:34px;box-shadow:0 40px 80px -30px rgba(0,0,0,.28);position:relative;border:1px solid var(--line)}
+.form-card::before{content:"";position:absolute;top:0;left:34px;width:64px;height:4px;border-radius:0 0 4px 4px;background:var(--orange)}
+.form-card .tag{display:inline-block;background:var(--yellow);color:var(--black);font-size:.74rem;font-weight:800;padding:6px 12px;border-radius:999px;letter-spacing:.05em;margin-top:6px}
+.form-card h3{font-size:1.5rem;margin:12px 0 4px}
+.form-card .small{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px}
+.field input,.field select{width:100%;padding:13px 14px;border:1.5px solid #E6E6E6;border-radius:12px;font:inherit;font-size:.95rem;background:#fff;transition:border .2s,background .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--orange);background:#fff}
+.form-card .btn{width:100%;margin-top:6px}
+.secure{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 14px;font-size:.8rem;color:var(--muted);margin-top:14px}
+.form-ok{display:none;text-align:center;padding:24px 0}
+.form-ok .ic{width:66px;height:66px;border-radius:50%;background:var(--orange-soft);color:var(--orange)!important;color:var(--black);display:grid;place-items:center;font-size:2rem;font-weight:800;margin:0 auto 14px}
+
+/* stats */
+.stats{margin-top:-58px;position:relative;z-index:5}
+.stats-grid{background:#fff;border-radius:22px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(5,1fr);padding:28px 10px;border:1px solid var(--line)}
+.stat{text-align:center;padding:6px 10px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800;color:var(--black)}
+.stat b span{color:var(--orange)}
+.stat small{color:var(--muted);font-weight:600;font-size:.86rem}
+
+/* logos */
+.logos{padding:60px 0 20px}
+.logos p{text-align:center;color:var(--muted);font-weight:700;margin-bottom:22px}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;gap:46px;width:max-content;animation:scroll 34s linear infinite}
+.track img{height:58px;width:auto;border-radius:10px;filter:grayscale(1);opacity:.7;transition:.3s}
+.track img:hover{filter:none;opacity:1}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* problem */
+.problem-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.pain{display:grid;margin:22px 0 26px}
+.pain > div{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pain > div > span{flex:0 0 30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#FFF0EB;color:#E0440E;font-weight:800}
+.pain b{display:block}
+.pain p{color:var(--muted);font-size:.93rem}
+.bridge{font-weight:700;font-size:1.05rem;border-left:4px solid var(--orange);padding-left:14px;margin-bottom:24px}
+.problem-visual{position:relative}
+.problem-visual .big{background:var(--cream);border:1px solid var(--line);border-radius:30px;padding:34px;position:relative;overflow:hidden}
+.problem-visual .big::after{content:"";position:absolute;width:200px;height:200px;border-radius:50%;background:var(--yellow);opacity:.5;right:-70px;top:-70px}
+.problem-visual h3{color:var(--black);font-size:1.6rem;position:relative}
+.problem-visual p{color:var(--muted);position:relative;margin:8px 0 20px}
+.problem-visual img{border-radius:14px;box-shadow:0 20px 40px -12px rgba(0,0,0,.35);position:relative;background:#fff}
+
+/* solution */
+.sol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px}
+.sol{background:#fff;border-radius:var(--radius);padding:30px 26px;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.sol:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.sol .ic{width:56px;height:56px;border-radius:16px;background:var(--orange-soft);display:grid;place-items:center;font-size:1.6rem;margin-bottom:18px}
+.sol h3{font-size:1.12rem;margin-bottom:6px}
+.sol p{color:var(--muted);font-size:.94rem}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+.svc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden}
+.svc::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--orange);transition:width .35s}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.svc:hover::after{width:100%}
+.svc .ic{font-size:1.8rem;margin-bottom:14px}
+.svc h3{font-size:1.06rem;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:.92rem;flex:1}
+.svc .go{margin-top:14px;font-weight:700;color:var(--orange);font-size:.9rem}
+
+/* pricing */
+.price-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-top:46px;align-items:stretch}
+.pop{background:#fff;color:var(--ink);border:2px solid var(--orange);border-radius:28px;padding:40px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.pop::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--yellow);opacity:.35;right:-90px;top:-90px}
+.pop .ribbon{display:inline-block;background:var(--black);color:var(--yellow);font-size:.76rem;font-weight:800;padding:6px 14px;border-radius:999px;letter-spacing:.05em}
+.pop h3{color:var(--black);font-size:1.4rem;margin:16px 0 4px}
+.pop .price{font-family:Manrope,sans-serif;font-size:clamp(2.6rem,5vw,3.6rem);font-weight:800;line-height:1;color:var(--orange)}
+.pop .price small{font-size:1rem;font-weight:600;color:var(--muted)}
+.pop ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:24px 0 28px;position:relative;z-index:1}
+.pop li{display:flex;gap:8px;font-weight:600;font-size:.95rem}
+.pop li::before{content:"✓";flex:0 0 22px;height:22px;border-radius:50%;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;font-size:.72rem;font-weight:800}
+.pop .btn{position:relative;z-index:1}
+.pkg-list{background:#fff;border-radius:28px;padding:30px;border:1px solid var(--line);box-shadow:var(--shadow-soft);display:flex;flex-direction:column}
+.pkg-list h3{font-size:1.15rem;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 0;border-bottom:1px dashed var(--line)}
+.row:last-of-type{border-bottom:0}
+.row span{font-weight:600}
+.row b{color:var(--orange);white-space:nowrap}
+.pkg-list .note{margin-top:auto;background:var(--cream);border-radius:12px;padding:12px 14px;font-size:.88rem;font-weight:600}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+.why{padding:28px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.why:hover{transform:translateY(-5px);box-shadow:var(--shadow-soft)}
+.why .n{position:absolute;right:18px;top:6px;font-family:Manrope,sans-serif;font-size:3.4rem;font-weight:800;color:#F3F3F3}
+.why .ic{font-size:1.8rem;margin-bottom:12px}
+.why h3{font-size:1.1rem;margin-bottom:6px;position:relative}
+.why p{color:var(--muted);font-size:.95rem;position:relative}
+.compare{margin-top:48px;background:#fff;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft)}
+.compare table{width:100%;border-collapse:collapse;font-size:.96rem}
+.compare th,.compare td{padding:16px 18px;text-align:center;border-bottom:1px solid var(--line)}
+.compare th:first-child,.compare td:first-child{text-align:left;font-weight:600}
+.compare thead th{background:var(--cream);font-weight:800}
+.compare .tk{background:var(--yellow-soft);font-weight:800}
+.compare thead .tk{background:var(--yellow);color:var(--black)}
+.compare tr:last-child td{border-bottom:0}
+.y{color:var(--ok);font-weight:800}.n{color:#C4C4C4}
+.compare-scroll{overflow-x:auto}
+
+/* work */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.work{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);transition:transform .25s,box-shadow .25s;display:block}
+.work:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.work .shot{aspect-ratio:16/10;background:linear-gradient(135deg,#FFF2E8,#FFF8E1);overflow:hidden;display:grid;place-items:center}
+.work .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s}
+.work:hover .shot img{transform:scale(1.05)}
+.work .shot .ph{font-family:Manrope,sans-serif;font-size:3.4rem;font-weight:800;color:var(--orange)}
+.work .body{padding:22px}
+.work .cat{font-size:.74rem;font-weight:800;color:var(--orange);text-transform:uppercase;letter-spacing:.06em}
+.work h3{margin:6px 0 8px;font-size:1.15rem}
+.work .win{display:flex;gap:8px;font-weight:600;font-size:.93rem;color:var(--ink)}
+.work .win::before{content:"↗";color:var(--ok);font-weight:800}
+
+/* testimonial */
+.testi{background:#fff;border-radius:32px;padding:54px;display:grid;grid-template-columns:auto 1fr;gap:42px;align-items:center;position:relative;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.testi::before{content:"“";position:absolute;right:36px;top:-50px;font-family:Georgia,serif;font-size:17rem;color:var(--yellow);opacity:.45;line-height:1}
+.testi img{width:160px;height:160px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:var(--shadow)}
+.testi blockquote{font-size:clamp(1.2rem,2.2vw,1.6rem);font-weight:700;line-height:1.45;margin:10px 0 18px;color:var(--black);position:relative}
+.testi cite{font-style:normal;font-weight:800}
+.testi cite small{display:block;font-weight:500;color:var(--muted)}
+.testi .video{margin-top:20px;display:inline-flex;gap:10px;align-items:center;font-weight:700;color:var(--orange)}
+.testi .video span{width:38px;height:38px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:.9rem}
+
+/* industries */
+.ind-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:40px}
+.ind{display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--line);padding:14px 22px;border-radius:999px;font-weight:700;transition:.25s}
+.ind:hover{border-color:var(--orange);background:var(--orange-soft);transform:translateY(-3px)}
+.ind span{font-size:1.3rem}
+.ml{margin-top:22px;color:var(--muted);font-weight:600}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:52px;position:relative}
+.steps::before{content:"";position:absolute;top:33px;left:10%;right:10%;height:2px;background:repeating-linear-gradient(90deg,#FFC9A3 0 10px,transparent 10px 18px)}
+.step{text-align:center;position:relative}
+.step .num{width:66px;height:66px;margin:0 auto 16px;border-radius:50%;background:#fff;border:2px solid var(--orange);display:grid;place-items:center;font-family:Manrope,sans-serif;font-size:1.35rem;font-weight:800;color:var(--orange);box-shadow:0 0 0 8px var(--white)}
+.step .when{display:inline-block;background:var(--yellow-soft);color:var(--orange-dark);font-size:.74rem;font-weight:800;padding:4px 10px;border-radius:999px;margin-bottom:8px}
+.step h3{font-size:1.04rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.9rem}
+
+/* faq */
+.faq{max-width:840px;margin:42px auto 0}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:12px;padding:0 22px;transition:box-shadow .2s}
+.faq details[open]{box-shadow:var(--shadow-soft);border-color:#FFD2B0}
+.faq summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:700;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:0 0 30px;height:30px;border-radius:50%;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;font-size:1.2rem;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--orange);color:#fff}
+.faq details p{color:var(--muted);padding-bottom:20px}
+
+/* final */
+.final{padding:0 0 92px}
+.final-box{background:var(--orange);border-radius:36px;padding:60px;color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;position:relative;overflow:hidden}
+.final-box::before{content:"";position:absolute;width:380px;height:380px;border-radius:60px;background:var(--yellow);opacity:.55;right:-140px;top:-160px;transform:rotate(18deg)}
+.final-box > *{position:relative}
+.final-box .eyebrow{background:rgba(255,255,255,.2);color:#fff}
+.final-box .eyebrow::before{background:var(--yellow)}
+.final-box h2{color:#fff;font-size:clamp(2rem,4vw,3rem)}
+.final-box p{color:#FFF3E0;font-size:1.08rem;margin:16px 0 28px}
+.contact-list{background:#fff;color:var(--ink);border-radius:24px;padding:26px;display:grid;gap:16px;box-shadow:0 30px 60px -25px rgba(0,0,0,.35)}
+.contact-list a,.contact-list div{display:flex;gap:14px;align-items:center;font-weight:700}
+.contact-list .ci{flex:0 0 48px;height:48px;border-radius:14px;background:var(--yellow-soft);display:grid;place-items:center;font-size:1.25rem}
+.contact-list small{display:block;color:var(--muted);font-weight:500;font-size:.8rem}
+
+footer{background:var(--black);color:#A3A3A3;padding:22px 0;font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer b{color:var(--yellow)}
+
+/* floating whatsapp */
+.wa-float{position:fixed;right:20px;bottom:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.7);animation:pulsewa 2.4s infinite}
+@keyframes pulsewa{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+
+/* sticky mobile bar */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;border-top:1px solid var(--line);box-shadow:0 -10px 30px -10px rgba(0,0,0,.2);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:8px}
+.mbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.78rem;font-weight:800;padding:8px 4px;border-radius:12px}
+.mbar a .i{font-size:1.2rem}
+.mbar .call{color:var(--black);background:#F3F3F3}
+.mbar .wa{color:#fff;background:#25D366}
+.mbar .quote{color:#fff;background:var(--orange);flex:1.3}
+
+
+/* ===== MOTION GRAPHICS ===== */
+/* rotating headline word */
+.rot{display:inline-block;position:relative;white-space:nowrap}
+.rot .w{display:inline-block;animation:wordIn .55s cubic-bezier(.2,.8,.2,1)}
+@keyframes wordIn{from{opacity:0;transform:translateY(60%) rotateX(-60deg)}to{opacity:1;transform:none}}
+/* button shimmer */
+.btn-orange{position:relative;overflow:hidden}
+.btn-orange::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(110deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3.2s ease-in-out infinite}
+@keyframes shine{0%,60%{left:-80%}100%{left:130%}}
+/* WhatsApp icon inside buttons */
+.wa-ic{width:20px;height:20px;fill:currentColor;flex:0 0 20px}
+/* floating hero chips */
+.chip{position:absolute;z-index:3;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 14px;display:flex;gap:10px;align-items:center;font-size:.84rem;font-weight:700;box-shadow:0 18px 40px -16px rgba(0,0,0,.3);white-space:nowrap;animation:bob 4s ease-in-out infinite}
+.chip small{display:block;font-weight:500;color:var(--muted);font-size:.74rem}
+.chip .d{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:1rem}
+.chip.c1{left:-70px;top:-30px}
+.chip.c1 .d{background:#E7F9EE}
+.chip.c2{right:20px;bottom:-34px;animation-delay:-1.3s}
+.chip.c2 .d{background:var(--orange-soft)}
+.chip.c3{left:-60px;bottom:-34px;animation-delay:-2.6s}
+.chip.c3 .d{background:var(--yellow-soft)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.chip .live{width:8px;height:8px;border-radius:50%;background:#25D366;box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:pulsewa 1.8s infinite}
+/* hero yellow card gentle float */
+.hero::before{animation:spinfloat 9s ease-in-out infinite}
+@keyframes spinfloat{0%,100%{transform:rotate(12deg) translateY(0)}50%{transform:rotate(8deg) translateY(-14px)}}
+/* animated WhatsApp chat demo */
+.chat-wrap{display:flex;flex-direction:column;align-items:center;gap:22px}
+.chat-wrap h3{text-align:center;font-size:1.5rem}
+.chat-wrap .sub{color:var(--muted);text-align:center;margin-top:-14px}
+.phone{width:310px;max-width:100%;background:#111;border-radius:42px;padding:10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.45);position:relative}
+.phone::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:90px;height:22px;background:#111;border-radius:0 0 14px 14px;z-index:2}
+.screen{border-radius:32px;overflow:hidden;background:#EFE7DE;height:440px;display:flex;flex-direction:column}
+.chat-top{background:var(--orange);color:#fff;padding:36px 14px 12px;display:flex;align-items:center;gap:10px}
+.chat-top .av{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--orange);display:grid;place-items:center;font-weight:800;font-family:Manrope,sans-serif}
+.chat-top b{display:block;font-size:.92rem}
+.chat-top small{font-size:.72rem;opacity:.9}
+.msgs{flex:1;padding:14px 12px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;overflow:hidden;background-image:radial-gradient(rgba(0,0,0,.04) 1px,transparent 1px);background-size:14px 14px}
+.bub{max-width:82%;padding:8px 11px;border-radius:12px;font-size:.84rem;line-height:1.4;box-shadow:0 1px 1px rgba(0,0,0,.08);animation:pop .35s cubic-bezier(.2,.9,.3,1.3) both}
+.bub.me{align-self:flex-end;background:#DCF8C6;border-top-right-radius:3px}
+.bub.tk{align-self:flex-start;background:#fff;border-top-left-radius:3px}
+.bub .t{display:block;text-align:right;font-size:.62rem;color:#8a8a8a;margin-top:2px}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.92)}to{opacity:1;transform:none}}
+.typing{align-self:flex-start;background:#fff;border-radius:12px;padding:10px 12px;display:flex;gap:4px;animation:pop .3s both}
+.typing i{width:6px;height:6px;border-radius:50%;background:#9a9a9a;animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+.chat-input{background:#F6F6F6;padding:10px;display:flex;gap:8px;align-items:center}
+.chat-input span{flex:1;background:#fff;border-radius:999px;padding:9px 14px;font-size:.8rem;color:#9a9a9a}
+.chat-input i{width:38px;height:38px;border-radius:50%;background:#25D366;display:grid;place-items:center;color:#fff;font-style:normal}
+/* whatsapp float tooltip */
+.wa-tip{position:fixed;right:92px;bottom:34px;z-index:60;background:#fff;border:1px solid var(--line);border-radius:16px 16px 4px 16px;padding:12px 16px;font-size:.88rem;font-weight:600;box-shadow:0 20px 40px -16px rgba(0,0,0,.3);opacity:0;transform:translateY(12px) scale(.95);transition:.4s cubic-bezier(.2,.9,.3,1.2);pointer-events:none;max-width:240px}
+.wa-tip.show{opacity:1;transform:none;pointer-events:auto;cursor:pointer}
+.wa-tip b{color:var(--orange)}
+.wa-tip .x{position:absolute;top:4px;right:8px;font-size:.8rem;color:#999;cursor:pointer}
+/* staggered reveal */
+.svc-grid .reveal:nth-child(2),.why-grid .reveal:nth-child(2),.work-grid .reveal:nth-child(2),.sol-grid .reveal:nth-child(2),.steps .reveal:nth-child(2){transition-delay:.08s}
+.svc-grid .reveal:nth-child(3),.why-grid .reveal:nth-child(3),.work-grid .reveal:nth-child(3),.sol-grid .reveal:nth-child(3),.steps .reveal:nth-child(3){transition-delay:.16s}
+.svc-grid .reveal:nth-child(4),.why-grid .reveal:nth-child(4),.work-grid .reveal:nth-child(4),.sol-grid .reveal:nth-child(4),.steps .reveal:nth-child(4){transition-delay:.24s}
+.steps .reveal:nth-child(5){transition-delay:.32s}
+/* service icon wiggle on hover */
+.svc:hover .ic,.sol:hover .ic,.why:hover .ic{animation:wig .5s ease}
+@keyframes wig{0%,100%{transform:rotate(0)}30%{transform:rotate(-12deg) scale(1.1)}60%{transform:rotate(8deg)}}
+/* mobile bar 2 buttons */
+.mbar .wa{flex:2}
+@media (max-width:1100px){.chip.c1{left:-20px}.chip.c3{left:-20px}}
+@media (max-width:900px){.chip{display:none}}
+@media (max-width:640px){.wa-tip{display:none}.phone{width:280px}.screen{height:420px}}
+@media (prefers-reduced-motion:reduce){.chip,.hero::before,.btn-orange::after{animation:none}}
+
+
+/* ===== ATTRACTIVE UPGRADES ===== */
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--orange),var(--yellow));z-index:100;transition:width .1s linear}
+/* animated headline highlight */
+.mark{background:none;position:relative;z-index:0}
+.mark::before{content:"";position:absolute;left:0;bottom:.06em;height:.38em;width:0;background:var(--yellow);z-index:-1;border-radius:4px;animation:draw .9s .5s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes draw{to{width:100%}}
+/* orange ticker band */
+.ticker{background:var(--orange);color:#fff;padding:18px 0;transform:rotate(-1.6deg);margin:40px -20px 10px;overflow:hidden;box-shadow:0 20px 40px -20px rgba(255,107,0,.6)}
+.ticker .tt{display:flex;gap:34px;width:max-content;animation:scroll 26s linear infinite;font-family:Manrope,sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-.01em;white-space:nowrap}
+.ticker .tt span::after{content:"✦";color:var(--yellow);margin-left:34px}
+.ticker2{background:var(--black);transform:rotate(-1.6deg);margin-top:0;padding:12px 0;box-shadow:none}
+.ticker2 .tt{animation-direction:reverse;animation-duration:32s;font-size:1.05rem}
+/* service icons: bold tiles */
+.svc .ic{width:56px;height:56px;border-radius:16px;background:var(--orange-soft);display:grid;place-items:center;font-size:1.6rem;margin-bottom:16px;transition:background .3s,transform .3s}
+.svc:hover .ic{background:var(--orange);transform:translateY(-3px) rotate(-6deg)}
+.svc:hover h3{color:var(--orange)}
+/* browser-frame project cards */
+.work .shot{position:relative;padding-top:30px;background:#F4F4F4}
+.work .shot::before{content:"";position:absolute;top:0;left:0;right:0;height:30px;background:#EDEDED;border-bottom:1px solid #E2E2E2}
+.work .shot::after{content:"";position:absolute;top:11px;left:14px;width:8px;height:8px;border-radius:50%;background:#FF5F57;box-shadow:14px 0 0 #FEBC2E,28px 0 0 #28C840}
+.work .shot img{height:100%}
+.mock{width:100%;height:100%;padding:14px;display:flex;flex-direction:column;gap:9px;background:#fff}
+.mock .nv{display:flex;justify-content:space-between;align-items:center}
+.mock .lg{font-family:Manrope,sans-serif;font-weight:800;font-size:.85rem}
+.mock .lk{display:flex;gap:6px}.mock .lk i{width:22px;height:5px;border-radius:3px;background:#E6E6E6}
+.mock .hd{flex:1;border-radius:10px;padding:14px;display:flex;flex-direction:column;justify-content:center;gap:7px;color:#fff}
+.mock .hd b{font-family:Manrope,sans-serif;font-size:1rem;line-height:1.15}
+.mock .hd i{display:block;height:5px;border-radius:3px;background:rgba(255,255,255,.6);width:70%}
+.mock .hd i+i{width:50%}
+.mock .hd em{display:inline-block;align-self:flex-start;background:#fff;border-radius:999px;padding:4px 10px;font-size:.62rem;font-weight:800;font-style:normal}
+.mock .rw{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.mock .rw i{height:22px;border-radius:6px;background:#F1F1F1}
+.m-olive .hd{background:linear-gradient(135deg,#2F5D3A,#6E9B5B)}.m-olive .hd em{color:#2F5D3A}
+.m-evo .hd{background:linear-gradient(135deg,#14213D,#3A5BA0)}.m-evo .hd em{color:#14213D}
+.m-green .hd{background:linear-gradient(135deg,#1F7A4D,#9BC53D)}.m-green .hd em{color:#1F7A4D}
+.work:hover .mock{transform:scale(1.03)}.mock{transition:transform .5s}
+/* section heading underline accent */
+.center h2{position:relative}
+/* stat cards hover */
+.stat{transition:transform .25s}.stat:hover{transform:translateY(-4px)}
+/* glow behind final box */
+.final-box{box-shadow:0 40px 90px -40px rgba(255,107,0,.8)}
+@media (max-width:640px){.ticker .tt{font-size:1.05rem}.ticker2 .tt{font-size:.9rem}.ticker{margin:30px -20px 6px}}
+@media (prefers-reduced-motion:reduce){.ticker .tt{animation:none}.mark::before{animation:none;width:100%}}
+
+
+/* ===== Sponsored-style upgrades ===== */
+.live-dot{width:9px;height:9px;border-radius:50%;background:#25D366;box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:pulsewa 1.8s infinite}
+.trust-row{display:flex;flex-wrap:wrap;gap:22px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.tr{display:flex;gap:10px;align-items:center}
+.tr b{display:block;font-size:.92rem}.tr small{display:block;color:var(--muted);font-size:.78rem}
+.tr-ic{width:38px;height:38px;border-radius:12px;background:var(--orange-soft);display:grid;place-items:center}
+.stat .pre{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--muted);margin-bottom:2px}
+.stat b span{font-size:.55em;margin-left:3px}
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px;align-items:stretch}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px 30px;display:flex;flex-direction:column;position:relative;transition:transform .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.pcard.popular{border:2px solid var(--orange);box-shadow:var(--shadow);transform:scale(1.03)}
+.pcard.popular:hover{transform:scale(1.03) translateY(-6px)}
+.pcard .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--black);color:var(--yellow);font-size:.74rem;font-weight:800;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.pcard h3{font-size:1.3rem}
+.pdesc{color:var(--muted);font-size:.93rem;margin:6px 0 18px;min-height:3em}
+.pprice{font-family:Manrope,sans-serif;font-weight:800;font-size:2.4rem;color:var(--black);line-height:1}
+.pprice small{font-size:.9rem;font-weight:600;color:var(--muted)}
+.popular .pprice{color:var(--orange)}
+.ptime{display:inline-block;margin:12px 0 18px;background:var(--yellow-soft);color:var(--orange-dark);font-weight:700;font-size:.82rem;padding:5px 12px;border-radius:999px;align-self:flex-start}
+.pcard ul{list-style:none;display:grid;gap:10px;margin-bottom:26px;flex:1}
+.pcard li{display:flex;gap:10px;font-weight:600;font-size:.95rem}
+.pcard li::before{content:"✓";flex:0 0 22px;height:22px;border-radius:50%;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;font-size:.72rem;font-weight:800}
+.pcard .btn{width:100%;font-size:.94rem}
+.terms{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:34px}
+.terms span{background:#fff;border:1px solid var(--line);padding:10px 16px;border-radius:999px;font-weight:600;font-size:.9rem}
+@media (max-width:900px){.pcards{grid-template-columns:1fr;max-width:460px;margin-inline:auto}.pcard.popular{transform:none}.pcard.popular:hover{transform:translateY(-6px)}.pdesc{min-height:0}}
+@media (max-width:640px){.trust-row{gap:14px}.tr small{display:none}}
+
+
+/* ===== PREMIUM HERO SHOWCASE ===== */
+.hero h1{font-size:clamp(2.4rem,4.6vw,4rem)}
+.hero{padding-top:56px}
+.hero .badge{margin-bottom:18px}
+.hero::before{content:"";position:absolute;right:-4%;top:90px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFE27A,var(--yellow) 60%);opacity:.55;transform:none;animation:none;pointer-events:none}
+.hero-grid{grid-template-columns:1fr 1fr}
+.showcase{position:relative;height:540px}
+.showcase .ring{position:absolute;right:4%;top:40px;width:470px;height:470px;border-radius:50%;border:2px dashed rgba(255,107,0,.45);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.laptop{position:absolute;right:0;top:70px;width:100%;animation:bob 6s ease-in-out infinite;filter:drop-shadow(0 40px 50px rgba(0,0,0,.25))}
+.laptop .scr{background:#141414;border-radius:18px 18px 4px 4px;padding:12px 12px 14px}
+.laptop .in{aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#fff;position:relative}
+.laptop .in img,.mphone .in img{width:100%;height:100%;object-fit:cover;object-position:50% 0;animation:pan 16s ease-in-out infinite alternate}
+@keyframes pan{0%,10%{object-position:50% 0}90%,100%{object-position:50% 100%}}
+.laptop .base{height:18px;margin:0 -7%;background:linear-gradient(#EDEDED,#BFBFBF);border-radius:2px 2px 22px 22px;position:relative}
+.laptop .base::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:16%;height:7px;background:#CFCFCF;border-radius:0 0 10px 10px}
+.mphone{position:absolute;left:-18px;bottom:0;width:168px;background:#141414;border-radius:30px;padding:8px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45);animation:bob 5s ease-in-out infinite;animation-delay:-2s;z-index:2}
+.mphone .in{aspect-ratio:9/19;border-radius:23px;overflow:hidden;background:#fff;position:relative}
+.nomg{background:linear-gradient(135deg,var(--orange),var(--yellow))!important}
+.nomg::after{content:"Your website here";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-family:Manrope,sans-serif;font-weight:800;font-size:1.6rem}
+.nomg2::after{font-size:.9rem;text-align:center;padding:10px}
+.showcase .chip.c1{left:-26px;top:20px;bottom:auto;right:auto}
+.showcase .chip.c2{right:-14px;top:auto;bottom:150px;left:auto}
+.showcase .chip.c3{right:24%;bottom:6px;left:auto;top:auto}
+/* final CTA with form */
+.final-box{align-items:center}
+.final-box .form-card{color:var(--ink);box-shadow:0 40px 80px -30px rgba(0,0,0,.45)}
+.final-box .form-card h3{color:var(--black)}
+.final-box .form-card p{color:var(--muted);font-size:.85rem;margin:0}
+.final-box .form-card p.small{font-size:.9rem;margin-bottom:18px}
+.final-box .form-card .secure{margin-top:14px}
+.final-box .eyebrow{background:none;padding:0}
+.final-contact{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-weight:600;color:#FFF3E0;font-size:.95rem}
+.final-contact a:hover{color:#fff;text-decoration:underline}
+@media (max-width:1100px){.showcase .chip.c1{left:0}.showcase .chip.c2{right:0}}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.showcase{height:440px;max-width:560px;margin:10px auto 0;width:100%}.showcase .chip{display:flex}.hero::before{width:380px;height:380px;top:auto;bottom:120px;right:-120px}.showcase .ring{width:340px;height:340px}}
+@media (max-width:640px){.showcase{height:300px}.laptop{top:30px}.mphone{width:104px;border-radius:20px;padding:5px;left:-4px}.mphone .in{border-radius:16px}.showcase .chip{font-size:.72rem;padding:7px 10px}.showcase .chip .d{width:26px;height:26px}.showcase .chip.c2{display:none}.showcase .chip.c3{right:0}.showcase .ring{display:none}.hero::before{width:260px;height:260px;bottom:60px}}
+@media (max-width:640px){.hero-btns{flex-direction:column}.hero-btns .btn{width:100%}}
+@media (prefers-reduced-motion:reduce){.laptop,.mphone,.showcase .ring,.laptop .in img,.mphone .in img{animation:none}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.track,.pulse,.wa-float{animation:none}}
+
+/* responsive */
+@media (max-width:1024px){
+  .sol-grid,.svc-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(3,1fr);row-gap:36px}.steps::before{display:none}
+}
+@media (max-width:900px){
+  .hero::before{right:-40px;top:auto;bottom:40px;width:260px;height:260px}
+  .hero-grid,.problem-grid,.price-grid,.final-box{grid-template-columns:1fr}
+  .why-grid,.work-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:repeat(3,1fr);row-gap:18px}
+  .stat:nth-child(3){border-right:0}
+  .testi{grid-template-columns:1fr;text-align:center;padding:40px 26px}.testi img{margin:0 auto}
+  .final-box{padding:40px 28px}
+}
+@media (max-width:640px){
+  section{padding:66px 0}
+  .topbar{font-size:.78rem}
+  .nav-phone span.t,.nav .btn{display:none}
+  .hero{padding:40px 0 90px}
+  .hero::before{width:200px;height:200px;right:-60px;top:auto;bottom:120px}
+  .ticks{grid-template-columns:1fr}
+  .hero-btns .btn{flex:1}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat{border-right:0}
+  .stat:last-child{grid-column:1/-1}
+  .sol-grid,.svc-grid,.why-grid,.work-grid{grid-template-columns:1fr}
+  .pop{padding:30px}.pop ul{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .form-card{padding:28px 20px}
+  .compare th,.compare td{padding:12px 10px;font-size:.84rem}
+  .mbar{display:flex}
+  body{padding-bottom:78px}
+  .wa-float{display:none}
+}
+
+/* ===== no blank screens: drawn site previews show whenever a screenshot can't load ===== */
+.site{position:absolute;inset:0;overflow:hidden;background:#fff;font-family:"Plus Jakarta Sans",system-ui,sans-serif}
+.site .pg{position:absolute;left:0;right:0;top:0;animation:pagepan 16s ease-in-out infinite alternate}
+@keyframes pagepan{0%,10%{transform:translateY(0)}90%,100%{transform:translateY(calc(var(--shift,0px) * -1))}}
+.laptop .in>img,.mphone .in>img,.work .shot>img{position:relative;z-index:2}
+.work .shot>img{position:absolute;left:0;right:0;bottom:0;top:30px;width:100%;height:calc(100% - 30px)}
+/* Lenaa site */
+.lenaa{background:#0f0d0b;color:#f3e9da}
+.lenaa .x-nav{display:flex;justify-content:space-between;align-items:center;padding:4.5% 6%}
+.lenaa .x-lg{font-family:Manrope,sans-serif;font-weight:800;letter-spacing:.32em;font-size:clamp(9px,1.6vw,15px)}
+.lenaa .x-lk{display:flex;gap:7%;font-size:clamp(5px,.75vw,9px);opacity:.75;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.lenaa .x-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:5%;align-items:center;padding:2% 6% 6%}
+.lenaa .x-ey{font-size:clamp(5px,.75vw,9px);letter-spacing:.24em;text-transform:uppercase;color:#d4a85a}
+.lenaa h4{margin:.5em 0 .45em;font-family:Georgia,serif;font-weight:400;font-size:clamp(14px,2.6vw,30px);line-height:1.08;color:#fff}
+.lenaa h4 em{color:#d4a85a}
+.lenaa p{font-size:clamp(5.5px,.85vw,10px);line-height:1.6;opacity:.75;margin:0 0 .9em}
+.lenaa .x-bt{display:flex;gap:5%}
+.lenaa .x-bt span{font-size:clamp(5px,.8vw,9.5px);font-weight:800;padding:.7em 1.2em;border-radius:999px;background:#d4a85a;color:#0f0d0b;white-space:nowrap}
+.lenaa .x-bt span+span{background:transparent;border:1px solid rgba(243,233,218,.5);color:#f3e9da}
+.lenaa .x-ph{aspect-ratio:4/5;border-radius:10px;background:radial-gradient(circle at 50% 34%,#e9c992 0 17%,transparent 17.5%),radial-gradient(ellipse at 50% 100%,#c9954e 0 38%,transparent 38.5%),linear-gradient(160deg,#3b2a1a,#16110c);box-shadow:0 0 0 1px rgba(212,168,90,.35)}
+.lenaa .x-sec{padding:4% 6%;border-top:1px solid rgba(243,233,218,.12)}
+.lenaa .x-sec small{display:block;font-size:clamp(5px,.75vw,9px);letter-spacing:.22em;text-transform:uppercase;color:#d4a85a;margin-bottom:3%}
+.lenaa .x-row{display:grid;grid-template-columns:repeat(3,1fr);gap:4%}
+.lenaa .x-row span{aspect-ratio:3/4;border-radius:6px;background:linear-gradient(160deg,#2a2018,#4a3622)}
+.lenaa .x-row span:nth-child(2){background:linear-gradient(160deg,#d4a85a,#8a6430)}
+.lenaa .x-row.x-w span{aspect-ratio:16/10}
+.lenaa .x-q{font-family:Georgia,serif;font-style:italic;font-size:clamp(7px,1.3vw,15px);color:#fff;text-align:center;padding:5% 10%}
+/* Apolo mobile + desktop */
+.apolo{background:#f6f8fb;color:#0d2a4f}
+.apolo .x-nav{display:flex;justify-content:space-between;align-items:center;padding:8% 7% 5%;font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(7px,1.1vw,12px)}
+.apolo .x-nav i{width:14%;height:2px;background:#0d2a4f;box-shadow:0 4px 0 #0d2a4f,0 -4px 0 #0d2a4f}
+.apolo .x-hb{margin:0 6%;border-radius:10px;padding:10% 7%;background:linear-gradient(135deg,#0d2a4f,#2f6db5);color:#fff}
+.apolo .x-hb b{display:block;font-family:Manrope,sans-serif;font-size:clamp(9px,1.5vw,16px);line-height:1.15}
+.apolo .x-hb span{display:inline-block;margin-top:8%;font-size:clamp(6px,.8vw,9px);font-weight:800;background:#fff;color:#0d2a4f;border-radius:999px;padding:.6em 1.1em}
+.apolo .x-bed{margin:6% 6% 0;aspect-ratio:16/9;border-radius:10px;background:linear-gradient(#dfe7f2 0 55%,#fff 55% 72%,#c9d6e6 72%);box-shadow:inset 0 0 0 1px #d6dfeb}
+.apolo .x-gr{display:grid;grid-template-columns:1fr 1fr;gap:5%;padding:6%}
+.apolo .x-gr span{aspect-ratio:1;border-radius:8px;background:#fff;box-shadow:0 2px 6px rgba(13,42,79,.1);position:relative}
+.apolo .x-gr span::after{content:"";position:absolute;left:12%;right:12%;bottom:12%;height:8%;border-radius:4px;background:#2f6db5;opacity:.6}
+.apolo .x-rv2{margin:0 6% 8%;padding:6%;border-radius:10px;background:#fff;font-size:clamp(6px,.8vw,9px);color:#f5a623;letter-spacing:2px}
+/* work-card mocks for the other three */
+.m-apolo .hd{background:linear-gradient(135deg,#0d2a4f,#2f6db5)}.m-apolo .hd em{color:#0d2a4f}
+.m-lenaa{background:#0f0d0b}.m-lenaa .lg{color:#f3e9da;letter-spacing:.25em}.m-lenaa .lk i{background:#3a3128}
+.m-lenaa .hd{background:linear-gradient(135deg,#1c1510,#6b4a24)}.m-lenaa .hd b{font-family:Georgia,serif;font-weight:400}.m-lenaa .hd em{background:#d4a85a;color:#0f0d0b}.m-lenaa .rw i{background:#2a2018}
+.m-tri .hd{background:linear-gradient(135deg,#b3122e,#ff5a5f)}.m-tri .hd em{color:#b3122e}
+.lgtxt{display:inline-flex;align-items:center;height:100%;font-family:Manrope,sans-serif;font-weight:800;font-size:1.05rem;color:#9a9a9a;white-space:nowrap}
+.tq-av{flex:none;width:160px;height:160px;margin:0 auto;border:6px solid #fff;box-shadow:var(--shadow);font-size:3rem!important;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--yellow));color:#fff;display:grid;place-items:center;font-family:Manrope,sans-serif;font-weight:800;font-size:2rem}
+@media (prefers-reduced-motion:reduce){.site .pg{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- 1. TOP STRIP + HEADER -->
+<div class="progress" id="prog"></div>
+<div class="topbar">🎉 <b>Free website audit</b> with every quote this month · Reply within 24 hours · <a href="#enquiry">Claim yours</a></div>
+<header>
+  <div class="wrap nav">
+    <a href="#enquiry" class="logo" aria-label="Teknoppy">
+      <img src="https://www.teknoppy.com/logo.svg" alt="Teknoppy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+      <span style="display:none">TEKNOPPY</span>
+    </a>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+916282249224"><span class="ic">📞</span><span class="t">+91 62822 49224</span></a>
+      <a class="btn btn-orange" href="#enquiry">Get Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- 2. HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge"><span class="live-dot"></span> Fixed-price quote in 24 hours · Kochi since 2018</div>
+      <span class="eyebrow" style="display:flex">Web Design Company in Kochi</span>
+      <h1>Websites That Turn Visitors Into a <span class="mark rot" id="rot"><span class="w">Lead Machine</span></span></h1>
+      <p class="sub">Your customers search Google before they call. We build fast, mobile-friendly, SEO-ready websites that put your business in front of them and turn visits into calls, WhatsApp chats and enquiries.</p>
+      <ul class="ticks">
+        <li>Websites from ₹25,000</li>
+        <li>Live in 3–5 weeks</li>
+        <li>SEO + Google setup included</li>
+        <li>Fixed quote, no hidden costs</li>
+      </ul>
+      <div class="hero-btns">
+        <a href="#enquiry" data-msg="I'd like a free website quote." class="btn btn-orange pulse"><svg class="wa-ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm6.1 15.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.9.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.3-.4-.4-.6-.5z"/></svg> Get Free Quote on WhatsApp</a>
+        <a href="tel:+916282249224" class="btn btn-line">📞 Call Now</a>
+      </div>
+      <div class="trust-row">
+        <div class="tr"><span class="tr-ic">🚀</span><span><b>120+ websites</b><small>for 100+ businesses</small></span></div>
+        <div class="tr"><span class="tr-ic">🏆</span><span><b>Listed on DesignRush</b><small>Web design agency</small></span></div>
+        <div class="tr"><span class="tr-ic">📍</span><span><b>Vyttila office</b><small>Thykoodam, Kochi</small></span></div>
+      </div>
+    </div>
+
+    <div class="showcase" aria-hidden="true">
+      <div class="ring"></div>
+      <div class="laptop">
+        <div class="scr"><div class="in"><div class="site lenaa"><div class="pg">
+          <div class="x-nav"><span class="x-lg">LENAA</span><span class="x-lk"><span>Films</span><span>Books</span><span>Talks</span><span>Contact</span></span></div>
+          <div class="x-hero"><div><span class="x-ey">Actor · Author · TEDx Speaker</span><h4>Stories that <em>move</em> people</h4><p>Films, bestselling books and talks, finally in one place.</p><div class="x-bt"><span>Watch the TEDx talk</span><span>Explore books</span></div></div><div class="x-ph"></div></div>
+          <div class="x-sec"><small>Films</small><div class="x-row x-w"><span></span><span></span><span></span></div></div>
+          <div class="x-sec"><small>Books</small><div class="x-row"><span></span><span></span><span></span></div></div>
+          <div class="x-q">"Every story begins with one honest moment."</div>
+          <div class="x-sec"><small>Talks</small><div class="x-row x-w"><span></span><span></span><span></span></div></div>
+        </div></div><img src="https://www.teknoppy.com/case-studies/lenaalife-desktop.webp" alt="" onerror="this.remove()"></div></div>
+        <div class="base"></div>
+      </div>
+      <div class="mphone"><div class="in"><div class="site apolo"><div class="pg">
+          <div class="x-nav">APOLO<i></i></div>
+          <div class="x-hb"><b>Sleep better, every night</b><span>Shop Mattresses</span></div>
+          <div class="x-bed"></div>
+          <div class="x-gr"><span></span><span></span><span></span><span></span></div>
+          <div class="x-rv2">★★★★★</div>
+          <div class="x-gr"><span></span><span></span></div>
+        </div></div><img src="https://www.teknoppy.com/case-studies/apolomattress-mobile.webp" alt="" onerror="this.remove()"></div></div>
+      <div class="chip c1"><span class="d">💬</span><span>New WhatsApp enquiry<small><span class="live" style="display:inline-block;margin-right:6px"></span>just now</small></span></div>
+      <div class="chip c2"><span class="d">⚡</span><span>Fast on every phone<small>Mobile-first build</small></span></div>
+      <div class="chip c3"><span class="d">✅</span><span>Website live<small>in 3–5 weeks</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. OFFER STRIP -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><small class="pre">Websites from</small><b>₹25<span>K</span></b><small>Fixed price</small></div>
+      <div class="stat"><small class="pre">Your quote in</small><b>24<span>hrs</span></b><small>In writing</small></div>
+      <div class="stat"><small class="pre">Go live in</small><b>3–5<span>wks</span></b><small>Business sites</small></div>
+      <div class="stat"><small class="pre">SEO setup</small><b>Free<span>✓</span></b><small>With every site</small></div>
+      <div class="stat"><small class="pre">Delivered</small><b data-count="120">0<span>+</span></b><small>Websites since 2018</small></div>
+    </div>
+  </div>
+</div>
+<div class="logos">
+  <p>Brands that grew with Teknoppy</p>
+  <div class="marquee">
+    <div class="track">
+      <img src="https://www.teknoppy.com/client%20logos/olive.jpg" alt="Olives Resort" data-n="Olives Resort" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/al-coffee-1.jpg" alt="Al Coffee" data-n="Al Coffee" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/amster.jpg" alt="Amster" data-n="Amster" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/laughing-waters.jpg" alt="Laughing Waters" data-n="Laughing Waters" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/westn.jpg" alt="WestN Resorts" data-n="WestN Resorts" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/cochin-suraksha.webp" alt="Cochin Suraksha" data-n="Cochin Suraksha" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/creative-qatar.png" alt="Creative Qatar" data-n="Creative Qatar" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/abu-dhabi.jpg" alt="Abu Dhabi Business Hub" data-n="Abu Dhabi Business Hub" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/olive.jpg" alt="" data-n="Olives Resort" aria-hidden="true" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/al-coffee-1.jpg" alt="" data-n="Al Coffee" aria-hidden="true" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/amster.jpg" alt="" data-n="Amster" aria-hidden="true" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/laughing-waters.jpg" alt="" data-n="Laughing Waters" aria-hidden="true" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/westn.jpg" alt="" data-n="WestN Resorts" aria-hidden="true" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/cochin-suraksha.webp" alt="" data-n="Cochin Suraksha" aria-hidden="true" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/creative-qatar.png" alt="" data-n="Creative Qatar" aria-hidden="true" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+      <img src="https://www.teknoppy.com/client%20logos/abu-dhabi.jpg" alt="" data-n="Abu Dhabi Business Hub" aria-hidden="true" onerror="var t=document.createElement('span');t.className='lgtxt';t.textContent=this.dataset.n;if(this.getAttribute('aria-hidden'))t.setAttribute('aria-hidden','true');this.replaceWith(t)">
+    </div>
+  </div>
+</div>
+
+<div class="ticker" aria-hidden="true"><div class="tt"><span>Website Design</span><span>Landing Pages</span><span>SEO Services</span><span>WordPress</span><span>Ecommerce Stores</span><span>Website Redesign</span><span>Google Ads Ready</span><span>Mobile-First</span><span>Fast Loading</span><span>WhatsApp Integration</span><span>Website Design</span><span>Landing Pages</span><span>SEO Services</span><span>WordPress</span><span>Ecommerce Stores</span><span>Website Redesign</span><span>Google Ads Ready</span><span>Mobile-First</span><span>Fast Loading</span><span>WhatsApp Integration</span></div></div>
+<div class="ticker ticker2" aria-hidden="true"><div class="tt"><span>Live in 3–5 weeks</span><span>From ₹25,000</span><span>120+ websites</span><span>Kochi since 2018</span><span>Fixed quote</span><span>Free consultation</span><span>Live in 3–5 weeks</span><span>From ₹25,000</span><span>120+ websites</span><span>Kochi since 2018</span><span>Fixed quote</span><span>Free consultation</span><span>Live in 3–5 weeks</span><span>From ₹25,000</span><span>120+ websites</span><span>Kochi since 2018</span><span>Fixed quote</span><span>Free consultation</span></div></div>
+
+<!-- 4a. OUR WORK (moved up) -->
+<section class="cream">
+  <div class="wrap center reveal">
+    <span class="eyebrow">Proven results</span>
+    <h2>Recent Websites We've Launched</h2>
+    <p class="lead">Real businesses across Kerala, now getting found on Google and winning more enquiries.</p>
+  </div>
+  <div class="wrap work-grid">
+    <a href="#enquiry" class="work reveal"><div class="shot"><div class="mock m-olive"><div class="nv"><span class="lg">Olives Resort</span><span class="lk"><i></i><i></i><i></i></span></div><div class="hd"><b>Escape to Wayanad</b><i></i><i></i><em>Book Now</em></div><div class="rw"><i></i><i></i><i></i></div></div></div><div class="body"><div class="cat">Hospitality · Wayanad</div><h3>Olives Resort</h3><div class="win">Top Google rankings, more direct booking calls</div></div></a>
+    <a href="#enquiry" class="work reveal"><div class="shot"><div class="mock m-evo"><div class="nv"><span class="lg">Evosyz</span><span class="lk"><i></i><i></i><i></i></span></div><div class="hd"><b>Grow With a Franchise</b><i></i><i></i><em>WhatsApp Us</em></div><div class="rw"><i></i><i></i><i></i></div></div></div><div class="body"><div class="cat">Fintech · Kochi</div><h3>Evosyz</h3><div class="win">More franchise enquiries through WhatsApp</div></div></a>
+    <a href="#enquiry" class="work reveal"><div class="shot"><div class="mock m-green"><div class="nv"><span class="lg">Greens Ayurveda</span><span class="lk"><i></i><i></i><i></i></span></div><div class="hd"><b>Authentic Ayurveda in Kerala</b><i></i><i></i><em>Enquire</em></div><div class="rw"><i></i><i></i><i></i></div></div></div><div class="body"><div class="cat">Wellness · Calicut</div><h3>Greens Ayurveda</h3><div class="win">More international treatment enquiries</div></div></a>
+    <a href="#enquiry" class="work reveal"><div class="shot"><div class="mock m-apolo"><div class="nv"><span class="lg">Apolo Mattress</span><span class="lk"><i></i><i></i><i></i></span></div><div class="hd"><b>Sleep Better, Every Night</b><i></i><i></i><em>Shop Now</em></div><div class="rw"><i></i><i></i><i></i></div></div><img src="https://www.teknoppy.com/case-studies/apolomattress-desktop.webp" alt="Apolo Mattress Shopify store" loading="lazy" onerror="this.remove()"></div><div class="body"><div class="cat">Ecommerce · Kerala</div><h3>Apolo Mattress</h3><div class="win">Shopify store that answers buyers before checkout</div></div></a>
+    <a href="#enquiry" class="work reveal"><div class="shot"><div class="mock m-lenaa"><div class="nv"><span class="lg">LENAA</span><span class="lk"><i></i><i></i><i></i></span></div><div class="hd"><b>Stories That Move People</b><i></i><i></i><em>Watch the Talk</em></div><div class="rw"><i></i><i></i><i></i></div></div><img src="https://www.teknoppy.com/case-studies/lenaalife-desktop.webp" alt="Lenaa personal brand website" loading="lazy" onerror="this.remove()"></div><div class="body"><div class="cat">Personal Brand</div><h3>Lenaa</h3><div class="win">One home for an actor, author &amp; TEDx speaker</div></div></a>
+    <a href="#enquiry" class="work reveal"><div class="shot"><div class="mock m-tri"><div class="nv"><span class="lg">TriQare</span><span class="lk"><i></i><i></i><i></i></span></div><div class="hd"><b>Emergency Help in One Tap</b><i></i><i></i><em>Get the App</em></div><div class="rw"><i></i><i></i><i></i></div></div><img src="https://www.teknoppy.com/case-studies/triqare-desktop.webp" alt="TriQare healthtech website" loading="lazy" onerror="this.remove()"></div><div class="body"><div class="cat">Healthtech</div><h3>TriQare</h3><div class="win">Trust-first launch site for an SOS app</div></div></a>
+  </div>
+  <div class="cta-row"><a href="#enquiry" class="btn btn-orange pulse">I Want Results Like These →</a></div>
+</section>
+
+<!-- 4. PROBLEM -->
+<section>
+  <div class="wrap problem-grid">
+    <div class="reveal">
+      <span class="eyebrow">Sound familiar?</span>
+      <h2>Is Your Website Quietly Losing You Customers?</h2>
+      <p class="lead">Most business websites in Kochi look fine but don't bring in work. Here's why.</p>
+      <div class="pain">
+        <div><span>✕</span><div><b>Invisible on Google</b><p>Customers search "your service in Kochi" and find competitors.</p></div></div>
+        <div><span>✕</span><div><b>Slow on mobile</b><p>A slow site makes phone visitors leave in seconds.</p></div></div>
+        <div><span>✕</span><div><b>No clear next step</b><p>No WhatsApp button, weak forms, nothing that says "contact us".</p></div></div>
+        <div><span>✕</span><div><b>Outdated design</b><p>An old-looking site makes a good business look unreliable.</p></div></div>
+        <div><span>✕</span><div><b>No one to call</b><p>Your last developer stopped replying after launch.</p></div></div>
+      </div>
+      <p class="bridge">Every day your website underperforms, those enquiries go to a competitor.</p>
+      <a href="#enquiry" data-msg="My current website isn't bringing enquiries. Can you help fix it?" class="btn btn-orange"><svg class="wa-ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm6.1 15.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.9.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.3-.4-.4-.6-.5z"/></svg> Fix My Website</a>
+    </div>
+    <div class="chat-wrap reveal">
+      <h3>Getting a quote is this easy</h3>
+      <p class="sub">One tap. One WhatsApp chat. Plan in 24 hours.</p>
+      <div class="phone">
+        <div class="screen">
+          <div class="chat-top"><span class="av">T</span><span><b>Teknoppy</b><small>● online · replies fast</small></span></div>
+          <div class="msgs" id="msgs"></div>
+          <div class="chat-input"><span>Type a message</span><i>➤</i></div>
+        </div>
+      </div>
+      <a href="#enquiry" data-msg="I'd like a free website quote." class="btn btn-orange pulse"><svg class="wa-ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm6.1 15.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.9.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.3-.4-.4-.6-.5z"/></svg> Start Your Chat</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. SOLUTION -->
+<section class="cream">
+  <div class="wrap center reveal">
+    <span class="eyebrow">The Teknoppy way</span>
+    <h2>A Website Built to <span class="grad-text">Sell for You 24/7</span></h2>
+    <p class="lead">We don't just design pages. We build a complete online sales tool for your business.</p>
+  </div>
+  <div class="wrap sol-grid">
+    <div class="sol reveal"><div class="ic">🔍</div><h3>Found on Google</h3><p>SEO structure, keywords and Google Business setup from day one.</p></div>
+    <div class="sol reveal"><div class="ic">⚡</div><h3>Loads Fast</h3><p>Optimised for speed on 4G and every phone.</p></div>
+    <div class="sol reveal"><div class="ic">📲</div><h3>Made to Convert</h3><p>WhatsApp, Call and enquiry buttons where customers need them.</p></div>
+    <div class="sol reveal"><div class="ic">🎨</div><h3>Looks Premium</h3><p>Custom design that builds trust at first glance.</p></div>
+  </div>
+</section>
+
+<!-- 6. SERVICES -->
+<section>
+  <div class="wrap center reveal">
+    <span class="eyebrow">What we do</span>
+    <h2>Complete Web Design Services in Kochi</h2>
+    <p class="lead">Everything your business needs online, handled by one local team from start to finish.</p>
+  </div>
+  <div class="wrap svc-grid">
+    <a href="#enquiry" class="svc reveal"><div class="ic">💼</div><h3>Business Website Design</h3><p>A professional 5–15 page site that explains your services and generates leads.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc reveal"><div class="ic">🏢</div><h3>Corporate Websites</h3><p>Multi-page, CMS-powered sites for growing companies.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc reveal"><div class="ic">🎯</div><h3>Landing Pages</h3><p>High-converting pages built for Google Ads and campaigns.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc reveal"><div class="ic">✨</div><h3>Website Redesign</h3><p>A modern look and better speed, without losing rankings.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc reveal"><div class="ic">🧩</div><h3>WordPress Websites</h3><p>Easy to update yourself, no coding needed.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc reveal"><div class="ic">🛒</div><h3>Ecommerce Stores</h3><p>Shopify and WooCommerce stores with secure payments.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc reveal"><div class="ic">📈</div><h3>SEO Services</h3><p>Rank higher on Google for Kochi and Kerala searches.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc reveal"><div class="ic">🛠️</div><h3>Website Maintenance</h3><p>Updates, backups, security and speed checks every month.</p><div class="go">Get a quote →</div></a>
+  </div>
+</section>
+
+<!-- 7. PRICING -->
+<section class="cream" id="pricing">
+  <div class="wrap center reveal">
+    <span class="eyebrow">Transparent pricing</span>
+    <h2>Fixed Prices. Know the Cost Before We Start.</h2>
+    <p class="lead">Pick a starting point. We'll send an exact written quote within 24 hours.</p>
+  </div>
+  <div class="wrap pcards">
+      <div class="pcard reveal">
+        
+        <h3>Landing Page</h3>
+        <p class="pdesc">One high-converting page for Google Ads or a campaign.</p>
+        <div class="pprice"><small>from</small> ₹15,000</div>
+        <div class="ptime">⏱ Fast turnaround</div>
+        <ul><li>1–3 pages</li><li>Built for ads & enquiries</li><li>WhatsApp + Call buttons</li><li>Speed optimised</li></ul>
+        <a href="#enquiry" data-msg="I'd like a quote for a Landing Page (from ₹15,000)." class="btn btn-line">Get This Quote on WhatsApp</a>
+      </div>
+      <div class="pcard popular reveal">
+        <span class="ribbon">🔥 MOST POPULAR</span>
+        <h3>Business Website</h3>
+        <p class="pdesc">A complete website that gets you found and brings enquiries.</p>
+        <div class="pprice"><small>from</small> ₹25,000</div>
+        <div class="ptime">⏱ Live in 3–5 weeks</div>
+        <ul><li>5–8 custom pages</li><li>SEO + Google setup</li><li>WordPress, easy to edit</li><li>Support after launch</li></ul>
+        <a href="#enquiry" data-msg="I'd like a quote for a Business Website (from ₹25,000)." class="btn btn-orange pulse">Get This Quote on WhatsApp</a>
+      </div>
+      <div class="pcard reveal">
+        
+        <h3>Corporate Website</h3>
+        <p class="pdesc">A large CMS-powered site for growing companies.</p>
+        <div class="pprice"><small>from</small> ₹1,20,000</div>
+        <div class="ptime">⏱ Live in 6–10 weeks</div>
+        <ul><li>20–40 pages</li><li>Advanced SEO structure</li><li>Custom features & integrations</li><li>Priority support</li></ul>
+        <a href="#enquiry" data-msg="I'd like a quote for a Corporate Website (from ₹1,20,000)." class="btn btn-line">Get This Quote on WhatsApp</a>
+      </div>
+  </div>
+  <div class="wrap terms reveal">
+    <span>📝 Written fixed quote</span><span>🔍 SEO setup included</span><span>✨ Redesigns from ₹30,000</span><span>🛠️ Maintenance from ₹3,000/mo</span>
+  </div>
+</section>
+
+<!-- 8. WHY TEKNOPPY -->
+<section>
+  <div class="wrap center reveal">
+    <span class="eyebrow">Why us</span>
+    <h2>Why Kochi Businesses Choose Teknoppy</h2>
+  </div>
+  <div class="wrap why-grid">
+    <div class="why reveal"><span class="n">01</span><div class="ic">📍</div><h3>Local Kochi Team</h3><p>Meet us at our Thykoodam, Vyttila office whenever you need to.</p></div>
+    <div class="why reveal"><span class="n">02</span><div class="ic">🔍</div><h3>SEO from Day One</h3><p>Built to rank on Google, not just to look good.</p></div>
+    <div class="why reveal"><span class="n">03</span><div class="ic">⚡</div><h3>Fast Delivery</h3><p>Live in 3–5 weeks, not months.</p></div>
+    <div class="why reveal"><span class="n">04</span><div class="ic">💰</div><h3>Fixed Pricing</h3><p>A written quote with no hidden charges.</p></div>
+    <div class="why reveal"><span class="n">05</span><div class="ic">👥</div><h3>In-House Experts</h3><p>Design, development and SEO under one roof.</p></div>
+    <div class="why reveal"><span class="n">06</span><div class="ic">🤝</div><h3>Long-Term Support</h3><p>We stay with you long after launch.</p></div>
+  </div>
+  <div class="wrap">
+    <div class="compare reveal">
+      <div class="compare-scroll">
+        <table>
+          <thead><tr><th></th><th>Freelancer</th><th>Typical Agency</th><th class="tk">Teknoppy</th></tr></thead>
+          <tbody>
+            <tr><td>Fixed price upfront</td><td class="n">✕</td><td class="n">✕</td><td class="tk y">✓</td></tr>
+            <tr><td>SEO included</td><td class="n">✕</td><td>Extra cost</td><td class="tk y">✓</td></tr>
+            <tr><td>Delivery time</td><td>Uncertain</td><td>2–3 months</td><td class="tk">3–5 weeks</td></tr>
+            <tr><td>Full in-house team</td><td class="n">✕</td><td>Often outsourced</td><td class="tk y">✓</td></tr>
+            <tr><td>Local office in Kochi</td><td class="n">✕</td><td>Sometimes</td><td class="tk y">✓</td></tr>
+            <tr><td>Support after launch</td><td class="n">✕</td><td>Paid</td><td class="tk y">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="cta-row"><a href="#enquiry" class="btn btn-orange">Talk to Our Team →</a></div>
+</section>
+
+<!-- 10. TESTIMONIAL -->
+<section>
+  <div class="wrap center reveal" style="margin-bottom:40px">
+    <span class="eyebrow">Client love</span>
+    <h2>What Our Clients Say</h2>
+  </div>
+  <div class="wrap">
+    <div class="testi reveal">
+      <img src="https://www.teknoppy.com/testimonials/biju-thomas.webp" alt="Biju Thomas" loading="lazy" onerror="var a=document.createElement('span');a.className='tq-av';a.textContent='BT';this.replaceWith(a)">
+      <div>
+        <span class="stars">★★★★★</span>
+        <blockquote>"I have worked with many IT teams, but I am 100% happy with Teknoppy. We now rank at the top of Google and get many direct booking calls."</blockquote>
+        <cite>Biju Thomas<small>CEO, Olives Resort, Wayanad</small></cite>
+        <!-- Replace href with Lenaa's video testimonial link -->
+        <a href="#enquiry" class="video"><span>▶</span>Watch Lenaa's video review</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. INDUSTRIES -->
+<section class="cream">
+  <div class="wrap center reveal">
+    <span class="eyebrow">Who we work with</span>
+    <h2>Websites for Every Kochi Business</h2>
+    <div class="ind-grid">
+      <a href="#enquiry" class="ind"><span>🏥</span>Clinics &amp; Hospitals</a>
+      <a href="#enquiry" class="ind"><span>🏠</span>Real Estate</a>
+      <a href="#enquiry" class="ind"><span>🏝️</span>Resorts &amp; Tourism</a>
+      <a href="#enquiry" class="ind"><span>🍽️</span>Restaurants &amp; Cafés</a>
+      <a href="#enquiry" class="ind"><span>🎓</span>Schools &amp; Institutes</a>
+      <a href="#enquiry" class="ind"><span>🚀</span>Startups</a>
+      <a href="#enquiry" class="ind"><span>🏭</span>Manufacturing &amp; B2B</a>
+      <a href="#enquiry" class="ind"><span>⚖️</span>Professional Services</a>
+    </div>
+    <p class="ml">🌐 Malayalam and multilingual websites available</p>
+  </div>
+</section>
+
+<!-- 12. PROCESS -->
+<section>
+  <div class="wrap center reveal">
+    <span class="eyebrow">Simple process</span>
+    <h2>Your Website Live in 5 Easy Steps</h2>
+  </div>
+  <div class="wrap steps">
+    <div class="step reveal"><div class="num">1</div><span class="when">Day 1</span><h3>Free Consultation</h3><p>A 30-minute call to understand your goals.</p></div>
+    <div class="step reveal"><div class="num">2</div><span class="when">24 hrs</span><h3>Plan &amp; Fixed Quote</h3><p>Sitemap, timeline and price in writing.</p></div>
+    <div class="step reveal"><div class="num">3</div><span class="when">Week 1–2</span><h3>Design</h3><p>You see and approve every page.</p></div>
+    <div class="step reveal"><div class="num">4</div><span class="when">Week 2–4</span><h3>Develop &amp; SEO</h3><p>We build, optimise and test.</p></div>
+    <div class="step reveal"><div class="num">5</div><span class="when">Week 3–5</span><h3>Launch &amp; Support</h3><p>Go live with training and support.</p></div>
+  </div>
+  <div class="cta-row"><a href="#enquiry" class="btn btn-orange pulse">Start With a Free Call →</a></div>
+</section>
+
+<!-- 13. FAQ -->
+<section class="cream">
+  <div class="wrap center reveal">
+    <span class="eyebrow">FAQ</span>
+    <h2>Questions? We've Got Answers.</h2>
+  </div>
+  <div class="wrap faq">
+    <details open><summary>How much does a website cost in Kochi?</summary><p>Business websites start from ₹25,000. You get a fixed written quote before any work begins.</p></details>
+    <details><summary>How long does it take?</summary><p>Most websites go live in 3–5 weeks. Larger corporate sites take 6–10 weeks.</p></details>
+    <details><summary>Will my website rank on Google?</summary><p>SEO setup is included in every website. For faster growth, we also offer ongoing SEO plans.</p></details>
+    <details><summary>Can I update the website myself?</summary><p>Yes. We build on WordPress and train you to edit text, images and pages.</p></details>
+    <details><summary>Will it work on mobile?</summary><p>Yes. Every site is designed mobile-first and tested on phones, tablets and desktops.</p></details>
+    <details><summary>I already have a website. Can you improve it?</summary><p>Yes. We redesign and speed up your site without losing your Google rankings.</p></details>
+    <details><summary>Do you support after launch?</summary><p>Yes. Support is included after launch, and maintenance plans start from ₹3,000/month.</p></details>
+    <details><summary>Do you work outside Kochi?</summary><p>Yes. We work across Kerala and with clients in the UAE and Qatar.</p></details>
+  </div>
+  <div class="cta-row"><a href="#enquiry" class="btn btn-orange">Still Have Questions? Ask Us →</a></div>
+</section>
+
+<!-- 14. FINAL CTA -->
+<section class="final cream">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <div>
+        <span class="eyebrow">Let's build yours</span>
+        <h2>Ready to Get More Customers From Your Website?</h2>
+        <p>Get a free website plan, a free audit of your current site and a fixed quote within 24 hours, with no obligation.</p>
+        <a href="#enquiry" class="btn btn-black pulse">Get My Free Quote →</a>
+        <div class="final-contact">
+          <a href="tel:+916282249224">📞 +91 62822 49224</a>
+          <a href="mailto:sales@teknoppy.com">✉️ sales@teknoppy.com</a>
+          <span>📍 Second Floor, Kaithakal Building, Door No 49, Kaithakal Lane, Thykoodam, Vyttila, Kochi 682019</span>
+        </div>
+      </div>
+      <div class="form-card" id="enquiry">
+      <div class="form-body">
+        <span class="tag">FREE · NO OBLIGATION</span>
+        <h3>Get Your Free Website Plan</h3>
+        <p class="small">Plan + fixed quote within 24 hours</p>
+        <form id="leadForm" novalidate>
+          <div class="field"><label for="name">Your Name</label><input id="name" name="name" required placeholder="e.g. Arun Kumar" autocomplete="name"></div>
+          <div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" required type="tel" placeholder="+91 98XXX XXXXX" autocomplete="tel"></div>
+          <div class="field"><label for="service">What do you need?</label>
+            <select id="service" name="service">
+              <option>New Business Website</option>
+              <option>Website Redesign</option>
+              <option>Landing Page</option>
+              <option>Corporate Website</option>
+              <option>Ecommerce Store</option>
+              <option>SEO Services</option>
+              <option>Not sure yet, need advice</option>
+            </select>
+          </div>
+          <div class="field"><label for="budget">Your budget</label>
+            <select id="budget" name="budget">
+              <option>₹15,000 – ₹25,000</option>
+              <option selected>₹25,000 – ₹50,000</option>
+              <option>₹50,000 – ₹1,00,000</option>
+              <option>₹1,00,000+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-orange"><svg class="wa-ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm6.1 15.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.9.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.3-.4-.4-.6-.5z"/></svg> Send on WhatsApp</button>
+          <p class="secure"><span>🔒 No spam</span><span>✓ No obligation</span><span>☕ Free 30-min call</span></p>
+        </form>
+      </div>
+      <div class="form-ok" id="formOk">
+        <div class="ic">✓</div>
+        <h3>Thank you!</h3>
+        <p class="small">Our team will call you within 24 hours. Need it faster? <a href="https://wa.me/916282249224" style="color:var(--orange);font-weight:700">Chat on WhatsApp</a></p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>© 2026 <b>Teknoppy</b> · Web Design Company in Kochi, Kerala</span><span>Established 2018 · Thykoodam, Vyttila, Ernakulam</span></div>
+</footer>
+
+<div class="wa-tip" id="waTip"><span class="x" id="waX">✕</span>Hi 👋 Need a website?<br><b>Get a free quote on WhatsApp</b></div>
+<a class="wa-float" href="https://wa.me/916282249224?text=Hi%20Teknoppy%2C%20I%27d%20like%20a%20quote%20for%20a%20website." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6.1C4.9 9.8 9.9 4.9 16 4.9s11.1 4.9 11.1 10.9S22.1 26.4 16 26.4zm6.1-8.1c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.9.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.3-.4-.4-.6-.5z"/></svg>
+</a>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a class="call" href="tel:+916282249224"><span class="i">📞</span>Call</a>
+  <a class="wa" href="#enquiry" data-msg="I'd like a free website quote."><span class="i">💬</span>Free Quote on WhatsApp</a>
+</nav>
+
+<script>
+/* Scroll reveal */
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+
+/* Count-up stats */
+(function(){
+  var nums=document.querySelectorAll('[data-count]');
+  var run=function(el){var t=+el.dataset.count,s=el.querySelector('span').outerHTML,c=0,step=Math.max(1,Math.ceil(t/40));
+    var iv=setInterval(function(){c+=step;if(c>=t){c=t;clearInterval(iv)}el.innerHTML=c+s},30);};
+  if(!('IntersectionObserver' in window)){nums.forEach(run);return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.5});
+  nums.forEach(function(n){io.observe(n)});
+})();
+
+/* ===== EVERY TAP -> WHATSAPP ENQUIRY =====
+   Each button/card opens WhatsApp with a ready-typed message based on what was tapped. */
+var WA_NUMBER='916282249224';
+function openWA(msg,label){
+  var text='Hi Teknoppy 👋 '+msg+'\n(From: Web Design Kochi page)';
+  /* Google Ads conversion on every WhatsApp tap: uncomment and add your IDs
+  if(window.gtag) gtag('event','conversion',{'send_to':'AW-XXXXXXXXX/XXXXXXXX','event_label':label||'whatsapp'}); */
+  if(window.gtag) gtag('event','whatsapp_click',{event_label:label||msg});
+  window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(text),'_blank');
+}
+function msgFor(a){
+  if(a.dataset.msg) return a.dataset.msg;
+  var h=a.querySelector('h3');
+  if(a.classList.contains('svc')&&h) return 'I\'m interested in '+h.textContent.trim()+'. Please share details and a quote.';
+  if(a.classList.contains('row')) return 'Please share pricing for: '+a.querySelector('span').textContent.replace(/^[^A-Za-z]+/,'').trim()+'.';
+  if(a.classList.contains('ind')) return 'I need a website for my '+a.textContent.replace(/^[^A-Za-z]+/,'').trim()+' business.';
+  if(a.classList.contains('work')&&h) return 'I saw your work for '+h.textContent.trim()+'. I\'d like a similar website.';
+  var t=a.textContent.replace(/[→📞💬📝]/g,'').trim();
+  return 'I\'d like a free website quote. ('+t+')';
+}
+document.querySelectorAll('a[href="#enquiry"]').forEach(function(a){
+  a.addEventListener('click',function(e){e.preventDefault();openWA(msgFor(a),a.textContent.trim().slice(0,40));});
+});
+/* all direct WhatsApp links also tracked */
+document.querySelectorAll('a[href^="https://wa.me"]').forEach(function(a){
+  a.addEventListener('click',function(){if(window.gtag) gtag('event','whatsapp_click',{event_label:'direct'});});
+});
+
+/* ===== Scroll progress ===== */
+(function(){var b=document.getElementById('prog');if(!b)return;
+  window.addEventListener('scroll',function(){var h=document.documentElement;b.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});})();
+
+/* ===== Rotating headline word ===== */
+(function(){
+  var el=document.getElementById('rot');if(!el)return;
+  var words=['Lead Machine','Sales Engine','24/7 Salesperson','Lead Magnet'],i=0;
+  setInterval(function(){i=(i+1)%words.length;el.innerHTML='<span class="w">'+words[i]+'</span>';},2600);
+})();
+
+/* ===== Animated WhatsApp chat demo ===== */
+(function(){
+  var box=document.getElementById('msgs');if(!box)return;
+  var script=[
+    ['me','Hi Teknoppy 👋 I need a website for my business'],
+    ['tk','Hi! Happy to help 😊 What kind of business do you run?'],
+    ['me','A dental clinic in Kochi 🦷'],
+    ['tk','Great! We\'ll send a free website plan and fixed quote within 24 hours ✅'],
+    ['me','Perfect, thank you! 🙌']
+  ];
+  function time(){var d=new Date();return d.getHours()+':'+('0'+d.getMinutes()).slice(-2);}
+  function play(){
+    box.innerHTML='';var k=0;
+    (function next(){
+      if(k>=script.length){setTimeout(play,3500);return;}
+      var m=script[k++];
+      var add=function(){var b=document.createElement('div');b.className='bub '+m[0];b.innerHTML=m[1]+'<span class="t">'+time()+(m[0]==='me'?' ✓✓':'')+'</span>';box.appendChild(b);setTimeout(next,m[0]==='me'?900:1300);};
+      if(m[0]==='tk'){var t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';box.appendChild(t);setTimeout(function(){t.remove();add();},1300);}
+      else add();
+    })();
+  }
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){play();io.disconnect();}},{threshold:.3});io.observe(box);}else play();
+})();
+
+/* ===== WhatsApp tooltip pops after 4s ===== */
+(function(){
+  var tip=document.getElementById('waTip'),x=document.getElementById('waX');if(!tip)return;
+  setTimeout(function(){tip.classList.add('show');},4000);
+  tip.addEventListener('click',function(e){if(e.target===x){tip.classList.remove('show');return;}openWA('I\'d like a free website quote.','tooltip');});
+})();
+
+/* Enquiry form
+   Default: sends the enquiry to Teknoppy's WhatsApp.
+   To send to email/CRM instead, set FORM_ENDPOINT to your form handler URL. */
+var FORM_ENDPOINT='';
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=this,name=f.name.value.trim(),phone=f.phone.value.trim(),svc=f.service.value,bud=f.budget.value;
+  if(!name){f.name.focus();f.name.style.borderColor='#E0440E';return;}
+  if(phone.replace(/\D/g,'').length<10){f.phone.focus();f.phone.style.borderColor='#E0440E';return;}
+  var done=function(){
+    document.querySelector('.form-body').style.display='none';
+    document.getElementById('formOk').style.display='block';
+    /* Google Ads conversion: uncomment and add your IDs
+    if(window.gtag) gtag('event','conversion',{'send_to':'AW-XXXXXXXXX/XXXXXXXX'}); */
+  };
+  if(FORM_ENDPOINT){
+    fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,phone:phone,service:svc,source:'Google Ads - Web Design Kochi'})}).finally(done);
+  }else{
+    openWA('I need a website quote.\nName: '+name+'\nPhone: '+phone+'\nService: '+svc+'\nBudget: '+bud,'form');
+    done();
+  }
+});
+</script>
+<script>
+/* drawn site previews: scroll the full page inside the screen */
+(function(){function fit(){[].forEach.call(document.querySelectorAll('.site .pg'),function(p){var h=p.offsetHeight-p.parentNode.clientHeight;p.style.setProperty('--shift',Math.max(0,h)+'px')})}addEventListener('load',fit);addEventListener('resize',fit);fit()})();
+</script>
+</body>
+</html>
