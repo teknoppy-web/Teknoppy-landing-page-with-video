@@ -117,11 +117,15 @@
   --neu-flat: #F4F6F9;
   --neu-raised: 8px 8px 22px rgba(166, 175, 195, 0.32), -8px -8px 22px rgba(255, 255, 255, 0.95);
   --neu-raised-sm: 4px 4px 12px rgba(166, 175, 195, 0.24), -4px -4px 12px rgba(255, 255, 255, 0.92);
-  --neu-raised-hover: 12px 16px 30px rgba(166, 175, 195, 0.42), -8px -8px 22px rgba(255, 255, 255, 0.98);
+  --neu-raised-hover: 12px 18px 32px rgba(166, 175, 195, 0.44), -8px -8px 22px rgba(255, 255, 255, 0.98);
   --neu-recessed: inset 3px 3px 7px rgba(166, 175, 195, 0.28), inset -3px -3px 7px rgba(255, 255, 255, 0.95);
   --neu-recessed-sm: inset 2px 2px 4px rgba(166, 175, 195, 0.22), inset -2px -2px 4px rgba(255, 255, 255, 0.9);
+  --neu-pressed: inset 2px 2px 6px rgba(166, 175, 195, 0.38), inset -2px -2px 6px rgba(255, 255, 255, 0.9);
   --neu-orange-glow: 0 10px 26px -8px rgba(255, 107, 0, 0.65), 0 4px 12px rgba(0, 0, 0, 0.06);
   --shadow-video: 0 30px 70px -20px rgba(0, 0, 0, 0.35);
+
+  /* Unified Motion Easing */
+  --ease-spring: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 *, *::before, *::after {
@@ -294,11 +298,15 @@ section {
   border: 0;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s, background 0.25s;
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s, background 0.25s;
   white-space: normal;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 .btn:active {
@@ -330,7 +338,6 @@ section {
 
 .btn-orange:hover {
   background: var(--orange-dark);
-  transform: translateY(-2px);
   box-shadow: 0 14px 30px -6px rgba(255, 107, 0, 0.75), 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
@@ -348,12 +355,11 @@ section {
 .btn-line:hover {
   border-color: var(--orange);
   color: var(--orange);
-  transform: translateY(-2px);
   box-shadow: var(--neu-raised);
 }
 
 .btn-line:active {
-  box-shadow: var(--neu-recessed-sm);
+  box-shadow: var(--neu-pressed);
 }
 
 .btn-black {
@@ -364,7 +370,6 @@ section {
 
 .btn-black:hover {
   background: #000;
-  transform: translateY(-2px);
   box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.75);
 }
 
@@ -462,21 +467,29 @@ header {
   align-items: center;
 }
 
+/* Card Group 1: Nav Phone Capsule */
 .nav-phone {
   font-weight: 700;
   display: flex;
   gap: 10px;
   align-items: center;
   font-size: 0.95rem;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 999px;
   background: #fff;
   box-shadow: var(--neu-raised-sm);
-  transition: transform 0.2s;
+  border: 1px solid rgba(226, 230, 238, 0.8);
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
 }
 
 .nav-phone:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--neu-raised-hover);
+}
+
+.nav-phone:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: var(--neu-pressed);
 }
 
 .nav-phone .ic {
@@ -487,6 +500,7 @@ header {
   display: grid;
   place-items: center;
   font-size: 0.95rem;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .nav .btn {
@@ -530,7 +544,7 @@ header {
   padding: 0;
 }
 
-/* Video Controls Overlay */
+/* Card Group 1b: Video Controls Overlay Capsule */
 .video-controls-badge {
   position: absolute;
   bottom: clamp(10px, 2.5vw, 24px);
@@ -540,7 +554,7 @@ header {
   gap: 10px;
   padding: 8px 16px;
   border-radius: 999px;
-  background: rgba(17, 17, 17, 0.78);
+  background: rgba(17, 17, 17, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -548,8 +562,12 @@ header {
   font-size: 0.82rem;
   font-weight: 700;
   z-index: 10;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-  transition: opacity 0.25s;
+  box-shadow: var(--neu-raised);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.video-controls-badge:hover {
+  transform: scale(1.02);
 }
 
 .vc-left {
@@ -592,13 +610,18 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: background 0.2s, transform 0.2s, border-color 0.2s;
+  transition: background 0.2s, transform 0.2s var(--ease-spring), border-color 0.2s;
 }
 
 .vc-btn:hover {
   background: var(--orange);
   border-color: var(--orange);
   transform: translateY(-1px);
+}
+
+.vc-btn:active {
+  transform: translateY(1px) scale(0.96);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .vc-btn:focus-visible {
@@ -629,6 +652,7 @@ header {
   z-index: 1;
 }
 
+/* Card Group 2a: Hero Badge */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -641,6 +665,12 @@ header {
   font-weight: 700;
   margin-bottom: 22px;
   box-shadow: var(--neu-raised-sm);
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neu-raised);
 }
 
 .live-dot {
@@ -666,6 +696,7 @@ header {
   line-height: 1.65;
 }
 
+/* Card Group 2b: Hero Value Ticks */
 .hero-center-box .ticks {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -683,10 +714,16 @@ header {
   font-weight: 700;
   font-size: clamp(1.02rem, 2.2vw, 1.12rem);
   background: #fff;
-  padding: 10px 18px;
+  padding: 12px 20px;
   border-radius: 999px;
   box-shadow: var(--neu-raised-sm);
-  border: 1px solid rgba(226, 230, 238, 0.6);
+  border: 1px solid rgba(226, 230, 238, 0.7);
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
+}
+
+.ticks li:hover {
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: var(--neu-raised-hover);
 }
 
 .ticks li::before {
@@ -700,6 +737,7 @@ header {
   color: var(--orange);
   font-size: 0.85rem;
   font-weight: 800;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .hero-center-box .hero-btns {
@@ -709,6 +747,7 @@ header {
   justify-content: center;
 }
 
+/* Card Group 2c: Hero Trust Cards */
 .hero-center-box .trust-row {
   display: flex;
   flex-wrap: wrap;
@@ -725,10 +764,16 @@ header {
   align-items: center;
   text-align: left;
   background: #fff;
-  padding: 10px 18px;
-  border-radius: 16px;
+  padding: 12px 20px;
+  border-radius: 18px;
   box-shadow: var(--neu-raised-sm);
-  border: 1px solid rgba(226, 230, 238, 0.6);
+  border: 1px solid rgba(226, 230, 238, 0.7);
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
+}
+
+.tr:hover {
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: var(--neu-raised-hover);
 }
 
 .tr b {
@@ -743,17 +788,24 @@ header {
 }
 
 .tr-ic {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
   background: var(--orange-soft);
+  box-shadow: var(--neu-raised-sm);
   display: grid;
   place-items: center;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  transition: transform 0.25s;
+}
+
+.tr:hover .tr-ic {
+  transform: scale(1.1) rotate(6deg);
 }
 
 /* =========================================================
    3. STATS STRIP (NEUMORPHIC CAPSULES)
+   Card Group 3: Stats Master Panel & Stat Metric Cards
    ========================================================= */
 .stats {
   margin-top: -38px;
@@ -769,13 +821,15 @@ header {
   grid-template-columns: repeat(5, 1fr);
   padding: 28px 16px;
   border: 1px solid rgba(226, 230, 238, 0.8);
+  transition: box-shadow 0.3s;
 }
 
 .stat {
   text-align: center;
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-right: 1px solid rgba(226, 230, 238, 0.8);
-  transition: transform 0.25s ease;
+  border-radius: 16px;
+  transition: transform 0.25s var(--ease-spring), background 0.25s, box-shadow 0.25s;
 }
 
 .stat:last-child {
@@ -784,6 +838,8 @@ header {
 
 .stat:hover {
   transform: translateY(-4px);
+  background: #FAFBFD;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .stat .pre {
@@ -817,7 +873,8 @@ header {
 }
 
 /* =========================================================
-   4. CLIENT LOGOS CONTINUOUS MARQUEE (NEUMORPHIC CHANNEL)
+   4. CLIENT LOGOS CONTINUOUS MARQUEE
+   Card Group 4: Marquee Channel & Logo Item Cards
    ========================================================= */
 .logos {
   padding: 68px 0 28px;
@@ -866,11 +923,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 54px;
-  padding: 4px 12px;
-  border-radius: 12px;
+  height: 56px;
+  padding: 6px 14px;
+  border-radius: 14px;
   background: transparent;
-  transition: transform 0.25s, filter 0.25s, opacity 0.25s;
+  transition: transform 0.25s var(--ease-spring), filter 0.25s, opacity 0.25s, box-shadow 0.25s, background 0.25s;
 }
 
 .logo-item img {
@@ -884,10 +941,16 @@ header {
   transition: filter 0.3s, opacity 0.3s, transform 0.3s;
 }
 
+.logo-item:hover {
+  background: #fff;
+  box-shadow: var(--neu-raised-sm);
+  transform: translateY(-2px) scale(1.05);
+}
+
 .logo-item:hover img {
   filter: grayscale(0);
   opacity: 1;
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 @keyframes scroll {
@@ -947,7 +1010,8 @@ header {
 }
 
 /* =========================================================
-   5. RECENT WEBSITES WE'VE LAUNCHED (EXACT 6 APPROVED PROJECTS)
+   5. RECENT WEBSITES WE'VE LAUNCHED
+   Card Group 5: 6 Portfolio Project Cards
    ========================================================= */
 .work-grid {
   display: grid;
@@ -962,14 +1026,19 @@ header {
   overflow: hidden;
   border: 1px solid rgba(226, 230, 238, 0.8);
   box-shadow: var(--neu-raised);
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s;
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
   display: flex;
   flex-direction: column;
 }
 
 .work:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.015);
   box-shadow: var(--neu-raised-hover);
+}
+
+.work:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: var(--neu-pressed);
 }
 
 .work .shot {
@@ -1021,7 +1090,7 @@ header {
 }
 
 .work:hover .shot img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .work .body {
@@ -1044,6 +1113,11 @@ header {
   margin: 6px 0 10px;
   font-size: 1.25rem;
   color: var(--black);
+  transition: color 0.25s;
+}
+
+.work:hover h3 {
+  color: var(--orange);
 }
 
 .work .win {
@@ -1065,6 +1139,7 @@ header {
 
 /* =========================================================
    6. PROBLEM SECTION
+   Card Group 6: Pain Point Cards & WhatsApp Demo Phone
    ========================================================= */
 .problem-grid {
   display: grid;
@@ -1088,6 +1163,12 @@ header {
   border-radius: var(--radius-sm);
   box-shadow: var(--neu-raised-sm);
   border: 1px solid rgba(226, 230, 238, 0.7);
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
+}
+
+.pain > div:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: var(--neu-raised);
 }
 
 .pain > div > span {
@@ -1100,6 +1181,7 @@ header {
   color: #E0440E;
   font-weight: 800;
   font-size: 0.9rem;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .pain b {
@@ -1151,8 +1233,13 @@ header {
   background: #111;
   border-radius: 42px;
   padding: 10px;
-  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--neu-raised), 0 40px 80px -30px rgba(0, 0, 0, 0.45);
   position: relative;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.phone:hover {
+  transform: translateY(-4px) scale(1.015);
 }
 
 .phone::before {
@@ -1196,6 +1283,7 @@ header {
   place-items: center;
   font-weight: 800;
   font-family: Manrope, sans-serif;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .chat-top b {
@@ -1313,6 +1401,7 @@ header {
 
 /* =========================================================
    7. SOLUTION SECTION (NEUMORPHIC TILES)
+   Card Group 7: 4 Solution Cards
    ========================================================= */
 .sol-grid {
   display: grid;
@@ -1327,12 +1416,17 @@ header {
   padding: 32px 26px;
   border: 1px solid rgba(226, 230, 238, 0.8);
   box-shadow: var(--neu-raised);
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
 }
 
 .sol:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.015);
   box-shadow: var(--neu-raised-hover);
+}
+
+.sol:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: var(--neu-pressed);
 }
 
 .sol .ic {
@@ -1345,6 +1439,11 @@ header {
   place-items: center;
   font-size: 1.6rem;
   margin-bottom: 20px;
+  transition: transform 0.25s;
+}
+
+.sol:hover .ic {
+  transform: scale(1.1) rotate(6deg);
 }
 
 .sol h3 {
@@ -1360,6 +1459,7 @@ header {
 
 /* =========================================================
    8. SERVICES SECTION (NEUMORPHIC CARDS)
+   Card Group 8: 8 Service Cards
    ========================================================= */
 .svc-grid {
   display: grid;
@@ -1376,7 +1476,7 @@ header {
   border-radius: var(--radius);
   padding: 28px 24px;
   box-shadow: var(--neu-raised);
-  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s, border-color 0.25s;
   position: relative;
   overflow: hidden;
 }
@@ -1393,9 +1493,14 @@ header {
 }
 
 .svc:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.015);
   box-shadow: var(--neu-raised-hover);
   border-color: rgba(255, 107, 0, 0.3);
+}
+
+.svc:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: var(--neu-pressed);
 }
 
 .svc:hover::after {
@@ -1423,6 +1528,7 @@ header {
 .svc h3 {
   font-size: 1.2rem;
   margin-bottom: 8px;
+  transition: color 0.25s;
 }
 
 .svc:hover h3 {
@@ -1445,6 +1551,7 @@ header {
 
 /* =========================================================
    9. PRICING SECTION
+   Card Group 9: 3 Package Cards & Guarantee Badges
    ========================================================= */
 .pcards {
   display: grid;
@@ -1463,11 +1570,11 @@ header {
   flex-direction: column;
   position: relative;
   box-shadow: var(--neu-raised);
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
 }
 
 .pcard:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.015);
   box-shadow: var(--neu-raised-hover);
 }
 
@@ -1479,6 +1586,11 @@ header {
 
 .pcard.popular:hover {
   transform: scale(1.02) translateY(-6px);
+}
+
+.pcard:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: var(--neu-pressed);
 }
 
 .pcard .ribbon {
@@ -1537,6 +1649,7 @@ header {
   padding: 6px 14px;
   border-radius: 999px;
   align-self: flex-start;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .pcard ul {
@@ -1566,6 +1679,7 @@ header {
   place-items: center;
   font-size: 0.8rem;
   font-weight: 800;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .pcard .btn {
@@ -1588,10 +1702,17 @@ header {
   font-weight: 700;
   font-size: 0.94rem;
   box-shadow: var(--neu-raised-sm);
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
+}
+
+.terms span:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neu-raised);
 }
 
 /* =========================================================
    10. WHY TEKNOPPY & COMPARISON TABLE
+   Card Group 10: 6 Benefit Cards & Comparison Table Master
    ========================================================= */
 .why-grid {
   display: grid;
@@ -1608,12 +1729,17 @@ header {
   box-shadow: var(--neu-raised);
   position: relative;
   overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
 }
 
 .why:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.015);
   box-shadow: var(--neu-raised-hover);
+}
+
+.why:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: var(--neu-pressed);
 }
 
 .why .n {
@@ -1636,6 +1762,11 @@ header {
   place-items: center;
   font-size: 1.6rem;
   margin-bottom: 16px;
+  transition: transform 0.25s;
+}
+
+.why:hover .ic {
+  transform: scale(1.1) rotate(6deg);
 }
 
 .why h3 {
@@ -1658,6 +1789,11 @@ header {
   overflow: hidden;
   border: 1px solid rgba(226, 230, 238, 0.8);
   box-shadow: var(--neu-raised);
+  transition: box-shadow 0.3s;
+}
+
+.compare:hover {
+  box-shadow: var(--neu-raised-hover);
 }
 
 .compare table {
@@ -1703,6 +1839,7 @@ header {
 
 /* =========================================================
    11. LEADERSHIP & VISION (SANAL EDISON)
+   Card Group 11: Master Leadership Panel, Frame, Quote & Pills
    ========================================================= */
 .leadership {
   position: relative;
@@ -1719,6 +1856,11 @@ header {
   padding: clamp(34px, 5vw, 56px);
   box-shadow: var(--neu-raised);
   border: 1px solid rgba(226, 230, 238, 0.8);
+  transition: box-shadow 0.3s;
+}
+
+.leadership-grid:hover {
+  box-shadow: var(--neu-raised-hover);
 }
 
 .founder-photo-col {
@@ -1735,6 +1877,12 @@ header {
   box-shadow: var(--neu-raised);
   border: 6px solid #fff;
   background: #F4F6F9;
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
+}
+
+.founder-photo-frame:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--neu-raised-hover);
 }
 
 .founder-img {
@@ -1761,6 +1909,7 @@ header {
   display: flex;
   align-items: center;
   gap: 12px;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .founder-badge b {
@@ -1786,6 +1935,12 @@ header {
   padding: 20px 24px;
   border-radius: 0 18px 18px 0;
   margin: 22px 0 24px;
+  box-shadow: var(--neu-raised-sm);
+  transition: transform 0.25s var(--ease-spring);
+}
+
+.leader-quote:hover {
+  transform: translateY(-2px);
 }
 
 .quote-mark {
@@ -1842,6 +1997,13 @@ header {
   padding: 8px 16px;
   border-radius: 999px;
   font-size: 0.9rem;
+  transition: transform 0.2s var(--ease-spring), box-shadow 0.2s;
+}
+
+.hl-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neu-raised-sm);
+  background: #fff;
 }
 
 .hl-item b {
@@ -1850,6 +2012,7 @@ header {
 
 /* =========================================================
    12. TESTIMONIAL
+   Card Group 12: Testimonial Master Card
    ========================================================= */
 .testi {
   background: #fff;
@@ -1863,6 +2026,12 @@ header {
   overflow: hidden;
   border: 1px solid rgba(226, 230, 238, 0.8);
   box-shadow: var(--neu-raised);
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
+}
+
+.testi:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--neu-raised-hover);
 }
 
 .testi::before {
@@ -1924,11 +2093,21 @@ header {
   align-items: center;
   font-weight: 700;
   color: var(--orange);
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: var(--neu-raised-sm);
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
+}
+
+.testi .video:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--neu-raised-hover);
 }
 
 .testi .video span {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: var(--orange);
   color: #fff;
@@ -1940,6 +2119,7 @@ header {
 
 /* =========================================================
    13. INDUSTRIES
+   Card Group 13: 8 Industry Pill Cards
    ========================================================= */
 .ind-grid {
   display: flex;
@@ -1960,14 +2140,19 @@ header {
   font-weight: 700;
   font-size: 1rem;
   box-shadow: var(--neu-raised-sm);
-  transition: transform 0.25s, box-shadow 0.25s, color 0.25s;
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s, color 0.25s, border-color 0.25s;
 }
 
 .ind:hover {
   border-color: var(--orange);
   color: var(--orange);
-  transform: translateY(-3px);
-  box-shadow: var(--neu-raised);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--neu-raised-hover);
+}
+
+.ind:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: var(--neu-pressed);
 }
 
 .ind span {
@@ -1983,6 +2168,7 @@ header {
 
 /* =========================================================
    14. ANIMATED 5 EASY STEPS PROCESS (NEUMORPHIC ROADMAP)
+   Card Group 14: 5 Step Cards, Timeline & Step Counter Nodes
    ========================================================= */
 .steps-wrap {
   position: relative;
@@ -2008,7 +2194,7 @@ header {
   width: 0%;
   background: linear-gradient(90deg, var(--yellow), var(--orange));
   border-radius: 4px;
-  transition: width 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: width 0.8s var(--ease-spring);
   box-shadow: 0 0 12px rgba(255, 107, 0, 0.6);
 }
 
@@ -2028,7 +2214,12 @@ header {
   padding: 24px 18px;
   border: 1px solid rgba(226, 230, 238, 0.8);
   box-shadow: var(--neu-raised);
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s, border-color 0.3s;
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s, border-color 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--neu-raised-hover);
 }
 
 .step.active {
@@ -2054,6 +2245,10 @@ header {
   transition: all 0.35s ease;
 }
 
+.step:hover .num {
+  transform: scale(1.05);
+}
+
 .step.active .num {
   background: var(--orange);
   color: #fff;
@@ -2071,6 +2266,7 @@ header {
   padding: 5px 12px;
   border-radius: 999px;
   margin-bottom: 10px;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .step h3 {
@@ -2086,20 +2282,28 @@ header {
 
 /* =========================================================
    15. FAQ SECTION
+   Card Group 15: 8 Accordion Details Cards
    ========================================================= */
 .faq {
   max-width: 860px;
   margin: 46px auto 0;
+  display: grid;
+  gap: 14px;
 }
 
 .faq details {
   background: #fff;
   border: 1px solid rgba(226, 230, 238, 0.8);
   border-radius: 18px;
-  margin-bottom: 14px;
+  margin-bottom: 0;
   padding: 0 24px;
   box-shadow: var(--neu-raised-sm);
-  transition: box-shadow 0.25s, border-color 0.25s;
+  transition: box-shadow 0.25s var(--ease-spring), border-color 0.25s, transform 0.25s var(--ease-spring);
+}
+
+.faq details:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neu-raised);
 }
 
 .faq details[open] {
@@ -2134,6 +2338,7 @@ header {
   place-items: center;
   font-size: 1.3rem;
   line-height: 1;
+  box-shadow: var(--neu-raised-sm);
   transition: transform 0.25s, background 0.25s, color 0.25s;
 }
 
@@ -2141,6 +2346,7 @@ header {
   transform: rotate(45deg);
   background: var(--orange);
   color: #fff;
+  box-shadow: var(--neu-orange-glow);
 }
 
 .faq details p {
@@ -2151,7 +2357,8 @@ header {
 }
 
 /* =========================================================
-   16. FINAL CTA & UPGRADED ENQUIRY SECTION (VIJAYAKALA PROFILE)
+   16. FINAL CTA & UPGRADED ENQUIRY SECTION
+   Card Group 16: Final Box, Vijayakala Card, Contact Pills, Form Card
    ========================================================= */
 .final {
   padding: 0 0 100px;
@@ -2169,6 +2376,7 @@ header {
   position: relative;
   overflow: hidden;
   box-shadow: 0 40px 90px -40px rgba(255, 107, 0, 0.85);
+  transition: transform 0.3s var(--ease-spring);
 }
 
 .final-box::before {
@@ -2220,10 +2428,16 @@ header {
   color: var(--ink);
   border-radius: 24px;
   padding: 24px;
-  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--neu-raised);
   display: flex;
   flex-direction: column;
   gap: 18px;
+  transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
+}
+
+.vijayakala-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--neu-raised-hover);
 }
 
 .vk-header {
@@ -2247,6 +2461,11 @@ header {
   object-position: top center;
   border: 3px solid #fff;
   box-shadow: var(--neu-raised-sm);
+  transition: transform 0.25s;
+}
+
+.vijayakala-card:hover .vk-photo {
+  transform: scale(1.04);
 }
 
 .vk-live-dot {
@@ -2307,12 +2526,18 @@ header {
   background: #fff;
   border: 1px solid rgba(226, 230, 238, 0.8);
   box-shadow: var(--neu-raised-sm);
-  transition: transform 0.2s, border-color 0.2s;
+  transition: transform 0.2s var(--ease-spring), border-color 0.2s, box-shadow 0.2s;
 }
 
 .contact-pill:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.015);
   border-color: var(--orange);
+  box-shadow: var(--neu-raised);
+}
+
+.contact-pill:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: var(--neu-pressed);
 }
 
 .contact-pill .ci {
@@ -2320,10 +2545,16 @@ header {
   height: 38px;
   border-radius: 10px;
   background: var(--yellow-soft);
+  box-shadow: var(--neu-raised-sm);
   display: grid;
   place-items: center;
   font-size: 1.15rem;
   flex: none;
+  transition: transform 0.2s;
+}
+
+.contact-pill:hover .ci {
+  transform: scale(1.1);
 }
 
 .contact-pill b {
@@ -2343,10 +2574,15 @@ header {
   background: #fff;
   border-radius: 28px;
   padding: clamp(28px, 4.5vw, 38px);
-  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--neu-raised), 0 40px 80px -30px rgba(0, 0, 0, 0.45);
   position: relative;
   border: 1px solid rgba(226, 230, 238, 0.8);
   color: var(--ink);
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
+}
+
+.form-card:hover {
+  box-shadow: var(--neu-raised-hover), 0 40px 80px -30px rgba(0, 0, 0, 0.45);
 }
 
 .form-card::before {
@@ -2370,6 +2606,7 @@ header {
   border-radius: 999px;
   letter-spacing: 0.05em;
   margin-top: 4px;
+  box-shadow: var(--neu-raised-sm);
 }
 
 .form-card h3 {
@@ -2474,7 +2711,7 @@ footer b {
   color: var(--yellow);
 }
 
-/* Floating WhatsApp Button */
+/* Card Group 17: Floating & Mobile Contact Controls */
 .wa-float {
   position: fixed;
   right: 20px;
@@ -2488,6 +2725,11 @@ footer b {
   place-items: center;
   box-shadow: 0 10px 30px -6px rgba(37, 211, 102, 0.7);
   animation: pulsewa 2.4s infinite;
+  transition: transform 0.25s var(--ease-spring);
+}
+
+.wa-float:hover {
+  transform: scale(1.08);
 }
 
 .wa-float svg {
@@ -2560,6 +2802,13 @@ footer b {
   font-weight: 800;
   padding: 8px 4px;
   border-radius: 12px;
+  box-shadow: var(--neu-raised-sm);
+  transition: transform 0.2s var(--ease-spring);
+}
+
+.mbar a:active {
+  transform: translateY(1px);
+  box-shadow: var(--neu-pressed);
 }
 
 .mbar a .i {
@@ -2577,17 +2826,55 @@ footer b {
   flex: 1.8;
 }
 
-/* Micro-animations */
-.reveal {
+/* =========================================================
+   MOTION SYSTEM: SCROLL ENTRANCE, STAGGERING & TIMING
+   ========================================================= */
+.reveal, .neu-card {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: translateY(20px) scale(0.985);
+  transition: opacity 0.65s var(--ease-spring), transform 0.65s var(--ease-spring), box-shadow 0.65s var(--ease-spring);
+  will-change: transform, opacity;
 }
 
-.reveal.in {
+.reveal.in, .neu-card.in {
   opacity: 1;
-  transform: none;
+  transform: translateY(0) scale(1);
 }
+
+/* Staggered entrance timing for card grids */
+.ticks > *:nth-child(1), .trust-row > *:nth-child(1), .stats-grid > *:nth-child(1),
+.work-grid > *:nth-child(1), .pain > *:nth-child(1), .sol-grid > *:nth-child(1),
+.svc-grid > *:nth-child(1), .pcards > *:nth-child(1), .terms > *:nth-child(1),
+.why-grid > *:nth-child(1), .ind-grid > *:nth-child(1), .steps > *:nth-child(1),
+.faq > *:nth-child(1), .contact-pill-list > *:nth-child(1) { transition-delay: 0.05s; }
+
+.ticks > *:nth-child(2), .trust-row > *:nth-child(2), .stats-grid > *:nth-child(2),
+.work-grid > *:nth-child(2), .pain > *:nth-child(2), .sol-grid > *:nth-child(2),
+.svc-grid > *:nth-child(2), .pcards > *:nth-child(2), .terms > *:nth-child(2),
+.why-grid > *:nth-child(2), .ind-grid > *:nth-child(2), .steps > *:nth-child(2),
+.faq > *:nth-child(2), .contact-pill-list > *:nth-child(2) { transition-delay: 0.12s; }
+
+.ticks > *:nth-child(3), .trust-row > *:nth-child(3), .stats-grid > *:nth-child(3),
+.work-grid > *:nth-child(3), .pain > *:nth-child(3), .sol-grid > *:nth-child(3),
+.svc-grid > *:nth-child(3), .pcards > *:nth-child(3), .terms > *:nth-child(3),
+.why-grid > *:nth-child(3), .ind-grid > *:nth-child(3), .steps > *:nth-child(3),
+.faq > *:nth-child(3), .contact-pill-list > *:nth-child(3) { transition-delay: 0.19s; }
+
+.ticks > *:nth-child(4), .stats-grid > *:nth-child(4),
+.work-grid > *:nth-child(4), .pain > *:nth-child(4), .sol-grid > *:nth-child(4),
+.svc-grid > *:nth-child(4), .terms > *:nth-child(4),
+.why-grid > *:nth-child(4), .ind-grid > *:nth-child(4), .steps > *:nth-child(4),
+.faq > *:nth-child(4) { transition-delay: 0.26s; }
+
+.stats-grid > *:nth-child(5), .work-grid > *:nth-child(5), .pain > *:nth-child(5),
+.svc-grid > *:nth-child(5), .why-grid > *:nth-child(5), .ind-grid > *:nth-child(5),
+.steps > *:nth-child(5), .faq > *:nth-child(5) { transition-delay: 0.33s; }
+
+.work-grid > *:nth-child(6), .svc-grid > *:nth-child(6), .why-grid > *:nth-child(6),
+.ind-grid > *:nth-child(6), .faq > *:nth-child(6) { transition-delay: 0.40s; }
+
+.svc-grid > *:nth-child(7), .ind-grid > *:nth-child(7), .faq > *:nth-child(7) { transition-delay: 0.47s; }
+.svc-grid > *:nth-child(8), .ind-grid > *:nth-child(8), .faq > *:nth-child(8) { transition-delay: 0.54s; }
 
 .rot {
   display: inline-block;
@@ -2838,7 +3125,7 @@ footer b {
   .track, .ticker .tt, .ticker2 .tt, .pulse, .wa-float, .steps-line-fill {
     animation: none !important;
   }
-  .reveal {
+  .reveal, .neu-card {
     opacity: 1 !important;
     transform: none !important;
   }
@@ -2901,15 +3188,15 @@ footer b {
   <div class="hero-content-below">
     <div class="wrap">
       <div class="hero-center-box reveal">
-        <div class="badge"><span class="live-dot"></span> Fixed-price quote in 24 hours · Kochi since 2018</div>
+        <div class="badge neu-card"><span class="live-dot"></span> Fixed-price quote in 24 hours · Kochi since 2018</div>
         <span class="eyebrow">Web Design Company in Kochi</span>
         <h1>Websites That Turn Visitors Into a <span class="mark rot" id="rot"><span class="w">Lead Machine</span></span></h1>
         <p class="sub">Your customers search Google before they call. We build fast, mobile-friendly, SEO-ready websites that put your business in front of them and turn visits into calls, WhatsApp chats and enquiries.</p>
         <ul class="ticks">
-          <li>Websites from ₹25,000</li>
-          <li>Live in 3–5 weeks</li>
-          <li>SEO + Google setup included</li>
-          <li>Fixed quote, no hidden costs</li>
+          <li class="neu-card">Websites from ₹25,000</li>
+          <li class="neu-card">Live in 3–5 weeks</li>
+          <li class="neu-card">SEO + Google setup included</li>
+          <li class="neu-card">Fixed quote, no hidden costs</li>
         </ul>
         <div class="hero-btns">
           <a href="#enquiry" data-msg="I'd like a free website quote." class="btn btn-orange pulse">
@@ -2919,9 +3206,9 @@ footer b {
           <a href="tel:+916282249224" class="btn btn-line">📞 Call Now</a>
         </div>
         <div class="trust-row">
-          <div class="tr"><span class="tr-ic">🚀</span><span><b>120+ websites</b><small>for 100+ businesses</small></span></div>
-          <div class="tr"><span class="tr-ic">🏆</span><span><b>Listed on DesignRush</b><small>Top Kochi agency</small></span></div>
-          <div class="tr"><span class="tr-ic">📍</span><span><b>Vyttila office</b><small>Thykoodam, Kochi</small></span></div>
+          <div class="tr neu-card"><span class="tr-ic">🚀</span><span><b>120+ websites</b><small>for 100+ businesses</small></span></div>
+          <div class="tr neu-card"><span class="tr-ic">🏆</span><span><b>Listed on DesignRush</b><small>Top Kochi agency</small></span></div>
+          <div class="tr neu-card"><span class="tr-ic">📍</span><span><b>Vyttila office</b><small>Thykoodam, Kochi</small></span></div>
         </div>
       </div>
     </div>
@@ -2931,7 +3218,7 @@ footer b {
 <!-- 3. OFFER & STATS STRIP -->
 <div class="stats">
   <div class="wrap">
-    <div class="stats-grid">
+    <div class="stats-grid neu-card">
       <div class="stat"><small class="pre">Websites from</small><b>₹25<span>K</span></b><small>Fixed price</small></div>
       <div class="stat"><small class="pre">Your quote in</small><b>24<span>hrs</span></b><small>In writing</small></div>
       <div class="stat"><small class="pre">Go live in</small><b>3–5<span>wks</span></b><small>Business sites</small></div>
@@ -2945,7 +3232,7 @@ footer b {
 <div class="logos">
   <div class="wrap">
     <p>Brands that grew with Teknoppy</p>
-    <div class="marquee-channel">
+    <div class="marquee-channel neu-card">
       <div class="marquee">
         <div class="track">
           <!-- Primary Set (24 Verified Logos) -->
@@ -3030,7 +3317,7 @@ footer b {
   </div>
   <div class="wrap work-grid">
     <!-- Project 1: Lenaa -->
-    <a href="#enquiry" class="work reveal">
+    <a href="#enquiry" class="work neu-card">
       <div class="shot">
         <img
           src="/portfolios/website/lenaa.webp"
@@ -3046,7 +3333,7 @@ footer b {
     </a>
 
     <!-- Project 2: RJ Visakh -->
-    <a href="#enquiry" class="work reveal">
+    <a href="#enquiry" class="work neu-card">
       <div class="shot">
         <img
           src="/portfolios/website/visakh-rj.webp"
@@ -3062,7 +3349,7 @@ footer b {
     </a>
 
     <!-- Project 3: Apolo Mattress -->
-    <a href="#enquiry" class="work reveal">
+    <a href="#enquiry" class="work neu-card">
       <div class="shot">
         <img
           src="/case-studies/apolomattress-desktop.webp"
@@ -3078,7 +3365,7 @@ footer b {
     </a>
 
     <!-- Project 4: General Tech Services -->
-    <a href="#enquiry" class="work reveal">
+    <a href="#enquiry" class="work neu-card">
       <div class="shot">
         <img
           src="/portfolios/website/general-tech-services.webp"
@@ -3094,7 +3381,7 @@ footer b {
     </a>
 
     <!-- Project 5: Mount Bell Global Studies -->
-    <a href="#enquiry" class="work reveal">
+    <a href="#enquiry" class="work neu-card">
       <div class="shot">
         <img
           src="/portfolios/website/mount-bell-global-studies.webp"
@@ -3110,7 +3397,7 @@ footer b {
     </a>
 
     <!-- Project 6: Cochin Suraksha -->
-    <a href="#enquiry" class="work reveal">
+    <a href="#enquiry" class="work neu-card">
       <div class="shot">
         <img
           src="/portfolios/website/cochin-suraksha.webp"
@@ -3136,11 +3423,11 @@ footer b {
       <h2>Is Your Website Quietly Losing You Customers?</h2>
       <p class="lead">Most business websites in Kochi look fine but don't bring in work. Here's why.</p>
       <div class="pain">
-        <div><span>✕</span><div><b>Invisible on Google</b><p>Customers search "your service in Kochi" and find competitors.</p></div></div>
-        <div><span>✕</span><div><b>Slow on mobile</b><p>A slow site makes phone visitors leave in seconds.</p></div></div>
-        <div><span>✕</span><div><b>No clear next step</b><p>No WhatsApp button, weak forms, nothing that says "contact us".</p></div></div>
-        <div><span>✕</span><div><b>Outdated design</b><p>An old-looking site makes a good business look unreliable.</p></div></div>
-        <div><span>✕</span><div><b>No one to call</b><p>Your last developer stopped replying after launch.</p></div></div>
+        <div class="neu-card"><span>✕</span><div><b>Invisible on Google</b><p>Customers search "your service in Kochi" and find competitors.</p></div></div>
+        <div class="neu-card"><span>✕</span><div><b>Slow on mobile</b><p>A slow site makes phone visitors leave in seconds.</p></div></div>
+        <div class="neu-card"><span>✕</span><div><b>No clear next step</b><p>No WhatsApp button, weak forms, nothing that says "contact us".</p></div></div>
+        <div class="neu-card"><span>✕</span><div><b>Outdated design</b><p>An old-looking site makes a good business look unreliable.</p></div></div>
+        <div class="neu-card"><span>✕</span><div><b>No one to call</b><p>Your last developer stopped replying after launch.</p></div></div>
       </div>
       <p class="bridge">Every day your website underperforms, those enquiries go to a competitor.</p>
       <a href="#enquiry" data-msg="My current website isn't bringing enquiries. Can you help fix it?" class="btn btn-orange">
@@ -3151,7 +3438,7 @@ footer b {
     <div class="chat-wrap reveal">
       <h3>Getting a quote is this easy</h3>
       <p class="sub">One tap. One WhatsApp chat. Plan in 24 hours.</p>
-      <div class="phone">
+      <div class="phone neu-card">
         <div class="screen">
           <div class="chat-top"><span class="av">T</span><span><b>Teknoppy</b><small>● online · replies fast</small></span></div>
           <div class="msgs" id="msgs"></div>
@@ -3174,10 +3461,10 @@ footer b {
     <p class="lead">We don't just design pages. We build a complete online sales tool for your business.</p>
   </div>
   <div class="wrap sol-grid">
-    <div class="sol reveal"><div class="ic">🔍</div><h3>Found on Google</h3><p>SEO structure, keywords and Google Business setup from day one.</p></div>
-    <div class="sol reveal"><div class="ic">⚡</div><h3>Loads Fast</h3><p>Optimised for speed on 4G and every mobile screen.</p></div>
-    <div class="sol reveal"><div class="ic">📲</div><h3>Made to Convert</h3><p>WhatsApp, Call and enquiry buttons where customers need them.</p></div>
-    <div class="sol reveal"><div class="ic">🎨</div><h3>Looks Premium</h3><p>Custom neumorphic design that builds instant trust with visitors.</p></div>
+    <div class="sol neu-card"><div class="ic">🔍</div><h3>Found on Google</h3><p>SEO structure, keywords and Google Business setup from day one.</p></div>
+    <div class="sol neu-card"><div class="ic">⚡</div><h3>Loads Fast</h3><p>Optimised for speed on 4G and every mobile screen.</p></div>
+    <div class="sol neu-card"><div class="ic">📲</div><h3>Made to Convert</h3><p>WhatsApp, Call and enquiry buttons where customers need them.</p></div>
+    <div class="sol neu-card"><div class="ic">🎨</div><h3>Looks Premium</h3><p>Custom neumorphic design that builds instant trust with visitors.</p></div>
   </div>
 </section>
 
@@ -3189,14 +3476,14 @@ footer b {
     <p class="lead">Everything your business needs online, handled by one local team from start to finish.</p>
   </div>
   <div class="wrap svc-grid">
-    <a href="#enquiry" class="svc reveal"><div class="ic">💼</div><h3>Business Website Design</h3><p>A professional 5–15 page site that explains your services and generates leads.</p><div class="go">Get a quote →</div></a>
-    <a href="#enquiry" class="svc reveal"><div class="ic">🏢</div><h3>Corporate Websites</h3><p>Multi-page, CMS-powered sites for growing companies.</p><div class="go">Get a quote →</div></a>
-    <a href="#enquiry" class="svc reveal"><div class="ic">🎯</div><h3>Landing Pages</h3><p>High-converting pages built for Google Ads and campaigns.</p><div class="go">Get a quote →</div></a>
-    <a href="#enquiry" class="svc reveal"><div class="ic">✨</div><h3>Website Redesign</h3><p>A modern look and better speed, without losing rankings.</p><div class="go">Get a quote →</div></a>
-    <a href="#enquiry" class="svc reveal"><div class="ic">🧩</div><h3>WordPress Websites</h3><p>Easy to update yourself, no coding needed.</p><div class="go">Get a quote →</div></a>
-    <a href="#enquiry" class="svc reveal"><div class="ic">🛒</div><h3>Ecommerce Stores</h3><p>Shopify and WooCommerce stores with secure payments.</p><div class="go">Get a quote →</div></a>
-    <a href="#enquiry" class="svc reveal"><div class="ic">📈</div><h3>SEO Services</h3><p>Rank higher on Google for Kochi and Kerala searches.</p><div class="go">Get a quote →</div></a>
-    <a href="#enquiry" class="svc reveal"><div class="ic">🛠️</div><h3>Website Maintenance</h3><p>Updates, backups, security and speed checks every month.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc neu-card"><div class="ic">💼</div><h3>Business Website Design</h3><p>A professional 5–15 page site that explains your services and generates leads.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc neu-card"><div class="ic">🏢</div><h3>Corporate Websites</h3><p>Multi-page, CMS-powered sites for growing companies.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc neu-card"><div class="ic">🎯</div><h3>Landing Pages</h3><p>High-converting pages built for Google Ads and campaigns.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc neu-card"><div class="ic">✨</div><h3>Website Redesign</h3><p>A modern look and better speed, without losing rankings.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc neu-card"><div class="ic">🧩</div><h3>WordPress Websites</h3><p>Easy to update yourself, no coding needed.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc neu-card"><div class="ic">🛒</div><h3>Ecommerce Stores</h3><p>Shopify and WooCommerce stores with secure payments.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc neu-card"><div class="ic">📈</div><h3>SEO Services</h3><p>Rank higher on Google for Kochi and Kerala searches.</p><div class="go">Get a quote →</div></a>
+    <a href="#enquiry" class="svc neu-card"><div class="ic">🛠️</div><h3>Website Maintenance</h3><p>Updates, backups, security and speed checks every month.</p><div class="go">Get a quote →</div></a>
   </div>
 </section>
 
@@ -3208,7 +3495,7 @@ footer b {
     <p class="lead">Pick a starting point. We'll send an exact written quote within 24 hours.</p>
   </div>
   <div class="wrap pcards">
-    <div class="pcard reveal">
+    <div class="pcard neu-card">
       <h3>Landing Page</h3>
       <p class="pdesc">One high-converting page for Google Ads or a marketing campaign.</p>
       <div class="pprice"><small>from</small> ₹15,000</div>
@@ -3222,7 +3509,7 @@ footer b {
       <a href="#enquiry" data-msg="I'd like a quote for a Landing Page (from ₹15,000)." class="btn btn-line">Get This Quote on WhatsApp</a>
     </div>
 
-    <div class="pcard popular reveal">
+    <div class="pcard popular neu-card">
       <span class="ribbon">🔥 MOST POPULAR</span>
       <h3>Business Website</h3>
       <p class="pdesc">A complete website that gets you found and brings consistent enquiries.</p>
@@ -3237,7 +3524,7 @@ footer b {
       <a href="#enquiry" data-msg="I'd like a quote for a Business Website (from ₹25,000)." class="btn btn-orange pulse">Get This Quote on WhatsApp</a>
     </div>
 
-    <div class="pcard reveal">
+    <div class="pcard neu-card">
       <h3>Corporate Website</h3>
       <p class="pdesc">A large CMS-powered site for growing companies and institutions.</p>
       <div class="pprice"><small>from</small> ₹1,20,000</div>
@@ -3252,7 +3539,10 @@ footer b {
     </div>
   </div>
   <div class="wrap terms reveal">
-    <span>📝 Written fixed quote</span><span>🔍 SEO setup included</span><span>✨ Redesigns from ₹30,000</span><span>🛠️ Maintenance from ₹3,000/mo</span>
+    <span class="neu-card">📝 Written fixed quote</span>
+    <span class="neu-card">🔍 SEO setup included</span>
+    <span class="neu-card">✨ Redesigns from ₹30,000</span>
+    <span class="neu-card">🛠️ Maintenance from ₹3,000/mo</span>
   </div>
 </section>
 
@@ -3263,15 +3553,15 @@ footer b {
     <h2>Why Kochi Businesses Choose Teknoppy</h2>
   </div>
   <div class="wrap why-grid">
-    <div class="why reveal"><span class="n">01</span><div class="ic">📍</div><h3>Local Kochi Team</h3><p>Meet us at our Thykoodam, Vyttila office whenever you need to.</p></div>
-    <div class="why reveal"><span class="n">02</span><div class="ic">🔍</div><h3>SEO from Day One</h3><p>Built to rank on Google, not just to look good.</p></div>
-    <div class="why reveal"><span class="n">03</span><div class="ic">⚡</div><h3>Fast Delivery</h3><p>Live in 3–5 weeks, not dragging for months.</p></div>
-    <div class="why reveal"><span class="n">04</span><div class="ic">💰</div><h3>Fixed Pricing</h3><p>A written quote with no hidden surprises or sudden charges.</p></div>
-    <div class="why reveal"><span class="n">05</span><div class="ic">👥</div><h3>In-House Experts</h3><p>Design, development and SEO under one roof.</p></div>
-    <div class="why reveal"><span class="n">06</span><div class="ic">🤝</div><h3>Long-Term Support</h3><p>We stay with you long after launch for security and maintenance.</p></div>
+    <div class="why neu-card"><span class="n">01</span><div class="ic">📍</div><h3>Local Kochi Team</h3><p>Meet us at our Thykoodam, Vyttila office whenever you need to.</p></div>
+    <div class="why neu-card"><span class="n">02</span><div class="ic">🔍</div><h3>SEO from Day One</h3><p>Built to rank on Google, not just to look good.</p></div>
+    <div class="why neu-card"><span class="n">03</span><div class="ic">⚡</div><h3>Fast Delivery</h3><p>Live in 3–5 weeks, not dragging for months.</p></div>
+    <div class="why neu-card"><span class="n">04</span><div class="ic">💰</div><h3>Fixed Pricing</h3><p>A written quote with no hidden surprises or sudden charges.</p></div>
+    <div class="why neu-card"><span class="n">05</span><div class="ic">👥</div><h3>In-House Experts</h3><p>Design, development and SEO under one roof.</p></div>
+    <div class="why neu-card"><span class="n">06</span><div class="ic">🤝</div><h3>Long-Term Support</h3><p>We stay with you long after launch for security and maintenance.</p></div>
   </div>
   <div class="wrap">
-    <div class="compare reveal">
+    <div class="compare neu-card reveal">
       <div class="compare-scroll">
         <table>
           <thead>
@@ -3300,10 +3590,10 @@ footer b {
 <!-- 11. LEADERSHIP & VISION (SANAL EDISON) -->
 <section class="leadership cream" id="leadership">
   <div class="wrap">
-    <div class="leadership-grid">
+    <div class="leadership-grid neu-card reveal">
       <!-- Founder Image Column -->
-      <div class="founder-photo-col reveal">
-        <div class="founder-photo-frame">
+      <div class="founder-photo-col">
+        <div class="founder-photo-frame neu-card">
           <img
             src="/images/sanal-edison.jpg"
             alt="Sanal Edison - Founder & Lead Strategist at Teknoppy"
@@ -3322,11 +3612,11 @@ footer b {
       </div>
 
       <!-- Leadership Content Column -->
-      <div class="leadership-content-col reveal">
+      <div class="leadership-content-col">
         <span class="eyebrow">Leadership &amp; Vision</span>
         <h2>Built by Local Kochi Minds, Trusted Globally</h2>
         
-        <div class="leader-quote">
+        <div class="leader-quote neu-card">
           <span class="quote-mark" aria-hidden="true">“</span>
           <blockquote>Great digital experiences begin with understanding people, solving real problems, and building with purpose.</blockquote>
         </div>
@@ -3338,9 +3628,9 @@ footer b {
         </div>
 
         <div class="founder-highlights">
-          <div class="hl-item"><span class="hl-ic">📍</span><b>Thykoodam, Vyttila</b></div>
-          <div class="hl-item"><span class="hl-ic">🚀</span><b>120+ Websites</b></div>
-          <div class="hl-item"><span class="hl-ic">👥</span><b>In-House Experts</b></div>
+          <div class="hl-item neu-card"><span class="hl-ic">📍</span><b>Thykoodam, Vyttila</b></div>
+          <div class="hl-item neu-card"><span class="hl-ic">🚀</span><b>120+ Websites</b></div>
+          <div class="hl-item neu-card"><span class="hl-ic">👥</span><b>In-House Experts</b></div>
         </div>
 
         <div class="leadership-cta">
@@ -3358,7 +3648,7 @@ footer b {
     <h2>What Our Clients Say</h2>
   </div>
   <div class="wrap">
-    <div class="testi reveal">
+    <div class="testi neu-card reveal">
       <img src="https://www.teknoppy.com/testimonials/biju-thomas.webp" alt="Biju Thomas" loading="lazy" onerror="this.onerror=null;this.src='/case-studies/olivesresort.webp';">
       <div>
         <span class="stars">★★★★★</span>
@@ -3376,14 +3666,14 @@ footer b {
     <span class="eyebrow">Who we work with</span>
     <h2>Websites for Every Kochi Business</h2>
     <div class="ind-grid">
-      <a href="#enquiry" class="ind"><span>🏥</span>Clinics &amp; Hospitals</a>
-      <a href="#enquiry" class="ind"><span>🏠</span>Real Estate</a>
-      <a href="#enquiry" class="ind"><span>🏝️</span>Resorts &amp; Tourism</a>
-      <a href="#enquiry" class="ind"><span>🍽️</span>Restaurants &amp; Cafés</a>
-      <a href="#enquiry" class="ind"><span>🎓</span>Schools &amp; Institutes</a>
-      <a href="#enquiry" class="ind"><span>🚀</span>Startups</a>
-      <a href="#enquiry" class="ind"><span>🏭</span>Manufacturing &amp; B2B</a>
-      <a href="#enquiry" class="ind"><span>⚖️</span>Professional Services</a>
+      <a href="#enquiry" class="ind neu-card"><span>🏥</span>Clinics &amp; Hospitals</a>
+      <a href="#enquiry" class="ind neu-card"><span>🏠</span>Real Estate</a>
+      <a href="#enquiry" class="ind neu-card"><span>🏝️</span>Resorts &amp; Tourism</a>
+      <a href="#enquiry" class="ind neu-card"><span>🍽️</span>Restaurants &amp; Cafés</a>
+      <a href="#enquiry" class="ind neu-card"><span>🎓</span>Schools &amp; Institutes</a>
+      <a href="#enquiry" class="ind neu-card"><span>🚀</span>Startups</a>
+      <a href="#enquiry" class="ind neu-card"><span>🏭</span>Manufacturing &amp; B2B</a>
+      <a href="#enquiry" class="ind neu-card"><span>⚖️</span>Professional Services</a>
     </div>
     <p class="ml">🌐 Malayalam and multilingual websites available</p>
   </div>
@@ -3401,31 +3691,31 @@ footer b {
       <div class="steps-line-fill" id="stepsLineFill"></div>
     </div>
     <div class="steps" id="stepsContainer">
-      <div class="step reveal" data-step="1">
+      <div class="step neu-card" data-step="1">
         <div class="num">1</div>
         <span class="when">Day 1</span>
         <h3>Free Consultation</h3>
         <p>A 30-minute call to understand your business goals, target audience, and website requirements.</p>
       </div>
-      <div class="step reveal" data-step="2">
+      <div class="step neu-card" data-step="2">
         <div class="num">2</div>
         <span class="when">24 hrs</span>
         <h3>Plan &amp; Fixed Quote</h3>
         <p>Receive a clear sitemap, delivery timeline, and fixed written quote with zero hidden charges.</p>
       </div>
-      <div class="step reveal" data-step="3">
+      <div class="step neu-card" data-step="3">
         <div class="num">3</div>
         <span class="when">Week 1–2</span>
         <h3>Design</h3>
         <p>Review and approve bespoke desktop and mobile designs tailored to your brand identity.</p>
       </div>
-      <div class="step reveal" data-step="4">
+      <div class="step neu-card" data-step="4">
         <div class="num">4</div>
         <span class="when">Week 2–4</span>
         <h3>Develop &amp; SEO</h3>
         <p>We build on fast, responsive architecture with Google SEO structure, speed, and security built in.</p>
       </div>
-      <div class="step reveal" data-step="5">
+      <div class="step neu-card" data-step="5">
         <div class="num">5</div>
         <span class="when">Week 3–5</span>
         <h3>Launch &amp; Support</h3>
@@ -3443,14 +3733,14 @@ footer b {
     <h2>Questions? We've Got Answers.</h2>
   </div>
   <div class="wrap faq">
-    <details open><summary>How much does a website cost in Kochi?</summary><p>Business websites start from ₹25,000. You get a fixed written quote before any work begins.</p></details>
-    <details><summary>How long does it take?</summary><p>Most websites go live in 3–5 weeks. Larger corporate sites take 6–10 weeks.</p></details>
-    <details><summary>Will my website rank on Google?</summary><p>SEO setup is included in every website. For faster growth, we also offer ongoing SEO plans.</p></details>
-    <details><summary>Can I update the website myself?</summary><p>Yes. We build on WordPress and train you to edit text, images and pages.</p></details>
-    <details><summary>Will it work on mobile?</summary><p>Yes. Every site is designed mobile-first and tested on phones, tablets and desktops.</p></details>
-    <details><summary>I already have a website. Can you improve it?</summary><p>Yes. We redesign and speed up your site without losing your Google rankings.</p></details>
-    <details><summary>Do you support after launch?</summary><p>Yes. Support is included after launch, and maintenance plans start from ₹3,000/month.</p></details>
-    <details><summary>Do you work outside Kochi?</summary><p>Yes. We work across Kerala and with clients in the UAE and Qatar.</p></details>
+    <details class="neu-card" open><summary>How much does a website cost in Kochi?</summary><p>Business websites start from ₹25,000. You get a fixed written quote before any work begins.</p></details>
+    <details class="neu-card"><summary>How long does it take?</summary><p>Most websites go live in 3–5 weeks. Larger corporate sites take 6–10 weeks.</p></details>
+    <details class="neu-card"><summary>Will my website rank on Google?</summary><p>SEO setup is included in every website. For faster growth, we also offer ongoing SEO plans.</p></details>
+    <details class="neu-card"><summary>Can I update the website myself?</summary><p>Yes. We build on WordPress and train you to edit text, images and pages.</p></details>
+    <details class="neu-card"><summary>Will it work on mobile?</summary><p>Yes. Every site is designed mobile-first and tested on phones, tablets and desktops.</p></details>
+    <details class="neu-card"><summary>I already have a website. Can you improve it?</summary><p>Yes. We redesign and speed up your site without losing your Google rankings.</p></details>
+    <details class="neu-card"><summary>Do you support after launch?</summary><p>Yes. Support is included after launch, and maintenance plans start from ₹3,000/month.</p></details>
+    <details class="neu-card"><summary>Do you work outside Kochi?</summary><p>Yes. We work across Kerala and with clients in the UAE and Qatar.</p></details>
   </div>
   <div class="cta-row"><a href="#enquiry" class="btn btn-orange">Still Have Questions? Ask Us →</a></div>
 </section>
@@ -3458,14 +3748,14 @@ footer b {
 <!-- 16. FINAL CTA & UPGRADED ENQUIRY SECTION (FEATURING VIJAYAKALA) -->
 <section class="final cream">
   <div class="wrap">
-    <div class="final-box reveal">
+    <div class="final-box neu-card reveal">
       <div>
         <span class="eyebrow">Let's build yours</span>
         <h2>Ready to Get More Customers From Your Website?</h2>
         <p class="final-lead">Get a free website plan, a free audit of your current site and a fixed quote within 24 hours, with no obligation.</p>
 
-        <!-- Vijayakala Profile Panel -->
-        <div class="vijayakala-card">
+        <!-- Vijayakala Profile Card -->
+        <div class="vijayakala-card neu-card">
           <div class="vk-header">
             <div class="vk-photo-wrap">
               <img
@@ -3489,21 +3779,21 @@ footer b {
           </p>
 
           <div class="contact-pill-list">
-            <a href="tel:+916282249224" class="contact-pill" aria-label="Call Teknoppy office">
+            <a href="tel:+916282249224" class="contact-pill neu-card" aria-label="Call Teknoppy office">
               <span class="ci">📞</span>
               <div>
                 <b>+91 62822 49224</b>
                 <small>Office line · Mon–Sat 9:30 AM – 6:30 PM</small>
               </div>
             </a>
-            <a href="mailto:sales@teknoppy.com" class="contact-pill" aria-label="Email sales at Teknoppy">
+            <a href="mailto:sales@teknoppy.com" class="contact-pill neu-card" aria-label="Email sales at Teknoppy">
               <span class="ci">✉️</span>
               <div>
                 <b>sales@teknoppy.com</b>
                 <small>Send your RFP or brief anytime</small>
               </div>
             </a>
-            <div class="contact-pill">
+            <div class="contact-pill neu-card">
               <span class="ci">📍</span>
               <div>
                 <b>Thykoodam, Vyttila, Kochi</b>
@@ -3515,7 +3805,7 @@ footer b {
       </div>
       
       <!-- Enquiry Form with Neumorphic Styling -->
-      <div class="form-card" id="enquiry">
+      <div class="form-card neu-card" id="enquiry">
         <div class="form-body">
           <span class="tag">FREE · NO OBLIGATION</span>
           <h3>Get Your Free Website Plan</h3>
@@ -3605,7 +3895,6 @@ footer b {
 
   if (!video) return;
 
-  // Sound toggle
   if (soundBtn) {
     soundBtn.addEventListener('click', function(e) {
       e.stopPropagation();
@@ -3623,7 +3912,6 @@ footer b {
     });
   }
 
-  // Play / Pause toggle
   if (playBtn) {
     playBtn.addEventListener('click', function(e) {
       e.stopPropagation();
@@ -3655,22 +3943,22 @@ footer b {
   }
 })();
 
-/* Scroll reveal observer */
+/* Scroll reveal & Neumorphic Card Entrance Observer */
 (function(){
-  var els = document.querySelectorAll('.reveal');
+  var cards = document.querySelectorAll('.reveal, .neu-card, .work, .sol, .svc, .why, .pcard, .step, .pain > div');
   if (!('IntersectionObserver' in window)) {
-    els.forEach(function(e){ e.classList.add('in'); });
+    cards.forEach(function(c){ c.classList.add('in'); });
     return;
   }
-  var io = new IntersectionObserver(function(en){
-    en.forEach(function(x){
-      if (x.isIntersecting) {
-        x.target.classList.add('in');
-        io.unobserve(x.target);
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
-  els.forEach(function(e){ io.observe(e); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  cards.forEach(function(c){ io.observe(c); });
 })();
 
 /* Animated 5 Steps Process Progress Indicator */
